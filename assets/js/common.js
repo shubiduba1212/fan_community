@@ -34,13 +34,17 @@ window.addEventListener("DOMContentLoaded", () => {
   }))
 
   // lnb - 소분류 메뉴 오른쪽 즐겨찾기 아이콘 클릭 시, 즐겨찾기 활성화/비활성화 표시
+  const isRootPage = location.pathname.endsWith("index.html") 
+                || location.pathname.endsWith("/"); 
+  const starPath = isRootPage ? "./assets/images/icons/"    // index.html에서 사용할 경로
+                              : "../assets/images/icons/";  // 하위 폴더에서 사용할 경로
   const lnbItems = document.querySelectorAll(".lnb > div > span");
   lnbItems.forEach(item => item.addEventListener("click", (e) => {
     const starIcon = e.currentTarget.querySelector("img");
     if(starIcon.src.includes("starFill20.svg")){
-      starIcon.src = "assets/images/icons/star.svg"; // 비활성화 상태로 변경
+      starIcon.src = starPath + "star.svg"; // 비활성화 상태로 변경
     } else {
-      starIcon.src = "assets/images/icons/starFill20.svg"; // 활성화 상태로 변경
+      starIcon.src = starPath + "starFill20.svg"; // 활성화 상태로 변경
     }
   }))
 
