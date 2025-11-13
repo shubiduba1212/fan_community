@@ -181,7 +181,7 @@ section.google_ad {padding: 20px 16px 0;}
 
   /* detail section */
   section.detail {padding: 20px 16px;}
-  .detail .board_category {display: flex; align-items: center; width: fit-content; height: 40px; border-radius: 8px; background: var(--company); color: #ffffff; font-size: 16px; font-weight: 400; text-overflow: unset; overflow: unset;}
+  .detail .board_category {display: flex; align-items: center; width: fit-content; height: 40px; padding: 0 4px; border-radius: 8px; background: var(--company); color: #ffffff; font-size: 16px; font-weight: 400; text-overflow: unset; overflow: unset;}
   .detail .board_category a {display: flex; justify-content: center; align-items: center; padding: 10.5px 8px; color: #ffffff;}
   .detail_info { padding: 16px 0;}
   .profile {display: flex; align-items: center; gap: 8px; padding-bottom: 8px;}
@@ -321,7 +321,7 @@ section.google_ad {padding: 20px 16px 0;}
   /* user */
   /* login page */
   .login_container {width: 100%; padding:40px 16px; margin: 0 auto;}
-  .jeje_logo {display: block;}
+  .jeje_logo {display: block; width: 120px; margin: 0 auto;}
   .form_box {display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: 10px; border-radius: 8px;}
   .login_input {width: 100%; height: 56px; padding: 0 16px; border-radius: 4px; border: 1px solid var(--border_secondary); font-size: 16px; color: var(--text_primary);}
   .password_box, .nickname_box {position: relative; width: 100%; height: 56px; }

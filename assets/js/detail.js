@@ -11,16 +11,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // 활성화 토글: like.svg / like_comment.svg → likeFill_red.svg
       if (icon.src.includes('like.svg') || icon.src.includes('like_comment.svg')) {
-        icon.src = '/assets/images/icons/likeFill_red.svg'; // 활성화
+        icon.src = '../assets/images/icons/likeFill_red.svg'; // 활성화
         count += 1; // 좋아요 +1
         countSpan.textContent = String(count);
         countSpan.classList.remove('d_none'); // 숫자 표시
       } else {
         // 비활성화 아이콘으로 복귀
         if (e.currentTarget.classList.contains('like_comment')) {
-          icon.src = '/assets/images/icons/like_comment.svg';
+          icon.src = '../assets/images/icons/like_comment.svg';
         } else {
-          icon.src = '/assets/images/icons/like.svg';
+          icon.src = '../assets/images/icons/like.svg';
         }
         count = Math.max(0, count - 1);
         countSpan.textContent = String(count);
