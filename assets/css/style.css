@@ -810,8 +810,8 @@ section.google_ad {padding: 20px 16px 0;}
   .swiper_banner .banner a {width: 100%; height: unset;}
   .swiper_banner .banner a img {width: 100%; height: 152px; object-fit: cover; border-radius: 8px;}
   .swiper-button-next, .swiper-button-prev {width: 32px; height: 32px; border-radius: 50%; z-index: 10; box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); border: 1px solid var(--border_secondary);}
-  .swiper-button-next {top:129px; right: 8px; background: var(--bg_surface100) url("./assets/images/icons/arrowRight20.svg") center center no-repeat;}
-  .swiper-button-prev {background: var(--bg_surface100) url("./assets/images/icons/arrowLeft20.svg") center center no-repeat;}
+  .swiper-button-next {top:129px; right: 8px; background: var(--bg_surface100) url("../../assets/images/icons/arrowRight20.svg") center center no-repeat;}
+  .swiper-button-prev {background: var(--bg_surface100) url("../assets/images/icons/arrowLeft20.svg") center center no-repeat;}
   .swiper-button-next svg, .swiper-button-prev svg {display: none;}
   .swiper-pagination-bullet-active {background: var(--company);}
   .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {bottom: 0;}
