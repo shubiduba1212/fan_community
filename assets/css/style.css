@@ -725,7 +725,7 @@ section.google_ad {padding: 20px 16px 0;}
 
   /* 09/18 & 9월 4주차 */
   /* PC모드에서만 활성화되어야하는 요소들 */
-  .logo p, .create_icon_btn, .mypage_icon_btn, .user_panel, .main_footer, .detail_bottom .icon_text, .scroll_to_comment img, .post_detail_sec .pagenation, .go_to_list, .post_table_box, .pagenation li:nth-child(n+8):nth-child(-n+13), .board_header, .logo img.web, .swiper_banner .board_top, section.post .post_header, .search_bar, .web_header, .section_combined, .pc_switch, main.create_main .main_tab_cont, .top_point_box, footer.main_footer, .attendance_main_box > h2, .icon_btn_box, main > .main_tab_cont:first-child, .mypage_box .count_info li.point_num, .mypage_box .count_info li:nth-child(2), .modal_top, .terms_detail_box, .alert_box, .leave_top span, .change_password_section .btn_box .cancel_btn {display: none;}
+  .logo p, .create_icon_btn, .mypage_icon_btn, .user_panel, .main_footer, .detail_bottom .icon_text, .scroll_to_comment img, .post_detail_sec .pagenation, .go_to_list, .post_table_box, .pagenation li:nth-child(n+8):nth-child(-n+13), .board_header, .logo img.web, .swiper_banner .board_top, section.post .post_header, .search_bar, .web_header, .section_combined, .pc_switch, main.create_main .main_tab_cont, .top_point_box, footer.main_footer, .attendance_main_box > h2, .icon_btn_box, main > .main_tab_cont:first-child, .mypage_box .count_info li.point_num, .mypage_box .count_info li:nth-child(2), .modal_top, .terms_detail_box, .alert_box, .leave_top span, .change_password_section .btn_box .cancel_btn, .official_links .body4 {display: none;}
 
   main > .main_tab_cont.sub {display: flex;}
   main.home_main .main_tab_cont, main.board_main .main_tab_cont, main.event_main .main_tab_cont, main.attendance_main .main_tab_cont {display: flex;}
@@ -924,6 +924,8 @@ section.google_ad {padding: 20px 16px 0;}
       bottom: 0px;
     }
   }
+
+  .main_section .official_links .body4 {display: block;}
 
   /* board / detail.html 게시글 상세 페이지 */
   section.post {width: 100%; max-width: 932px;}
