@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/common.js"></script>
+  <title>Fan Community</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="dark_bg"></div><!--햄버거메뉴 활성화용-->    
+    <div class="dark_bg_modal"></div><!-- 로그아웃 모달창용 -->   
+    <header>
+      <div class="header_cont">
+        <a href="/index.html" class="logo">
+          <img src="/assets/images/main/logo.png" alt="JEJE logo">
+          <!-- 9월 4주차 수정사항 - PC모드에서 사용하는 로고 이미지 추가 -->
+          <img src="/assets/images/main/logo.png" alt="JEJE logo" class="web">
+          <p>JEJE</p>
+        </a>
+        <!-- 9월 4주차 수정사항 - 검색바(현재는 아직 사용하지 않으므로 주석처리 및 css에도 보이지 않도록 설정) -->
+        <!-- <div class="search_bar">
+          <span><img src="/assets/images/icons/search_white.svg" alt="Biểu tượng tìm kiếm"></span>
+          <input type="text" placeholder="Nhập từ khóa tìm kiếm">
+          <span><img src="/assets/images/icons/close_white.svg" alt="Biểu tượng xóa"></span>
+        </div> -->
+        <div class="header_menu">
+          <!-- 9월 4주차 수정사항 - PC 모드인 경우, 글 작성하기 활성화 -->
+          <div class="create_icon_btn"><a href="/board/create.html"><img src="/assets/images/icons/plus_white.svg" alt="Biểu tượng viết bài">Bài đăng</a></div><!-- 글쓰기 아이콘 메뉴 -->
+          <div class="alert_icon_btn">
+            <span class="icon_menu"><img src="/assets/images/icons/notification_white.svg" alt="Biểu tượng Thông báo"><span class="notify_count">6</span></span>
+            <!-- 10월 3주차 수정사항 - 알림 목록 UI 추가 -->
+            <div class="alert_box">
+              <div class="alert_list_top">
+                <h3 class="title3">Thông báo</h3>
+                <div class="alert_btn_box">
+                  <span class="read_all">Đã đọc tất cả</span><!-- 전체 읽음 -->
+                  <span class="delete_all">Xóa tất cả</span><!-- 전체 삭제 -->
+                </div>
+              </div>
+              <div class="alert_list_box">
+                <p class="no_alerts body4 d_none">Không có thông báo nào.</p><!-- 알림이 없는 경우, 표시되는 문구 -->
+                <ul class="alert_list">
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Bài viết của bạn vừa nhận được lượt thích.</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Thông báo]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner" quá đỉnh! da da da Không thể chờ tập sau.</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>1h ago</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Bài viết của bạn vừa nhận được lượt thích. (게시글에 추천이 올랐습니다.)</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Đề xuất]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Sự kiện tặng quà sinh nhật Jin</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>7h ago</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Bình luận]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner"포스트 타이틀포스트 타이틀 포스트 타이틀</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>1h ago</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Bình luận]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner"포스트 타이틀포스트 타이틀 포스트 타이틀</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>15.10.2025</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item readed">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Bài viết của bạn vừa nhận được lượt thích.</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Thông báo]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner" quá đỉnh! da da da Không thể chờ tập sau.</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>14.10.2025</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- 알림 아이콘 -->
+          
+
+          <!-- 사이드 바 메뉴 (햄버거 버튼 메뉴) -->
+          <div class="hamburger_menu">
+            <span class="icon_menu">
+              <img src="/assets/images/icons/menu_white.svg" alt="Biểu tượng hamburger menu">
+            </span>
+            <div class="nav">
+              <!-- 10월 1주차 수정사항 - PC모드 > 로그인 전 / 로그인 후 UI 적용을 위한 기존 UI 변경 및 추가 -->
+              <button class="submit_btn login_btn" onclick="location.href='/user/login.html'">Đăng nhập</button>
+              <!-- 10월 1주차 수정사항 - PC모드에서는 로그인 하지 않은 경우, 아래 a태그 비활성화로 보이지 않아야합니다. -->              
+              <!-- 로그인한 사용자 정보 및 클릭시 마이페이지 수정 페이지로 이동 -->
+              <a href="/user/edit_mypage.html" class="d_none">
+                <div class="user_info">
+                  <div class="profile">
+                    <!-- 로그인하지 않은 경우, 아래 기본 사용자 이미지 및 p태그 사용 -->
+                    <img src="/assets/images/icons/userUnknown.svg" alt="Ảnh đại diện của người dùng"> <!-- Profile image -->
+                    
+                    <!-- 로그인한 상태인 경우만 아래 ul>li 활성화 -->
+                    <ul>
+                      <li class="nickname">BakerĐỉnhvãi</li> 
+                      <li class="user_point">1,200P</li>
+                    </ul>
+                  </div>
+                  <img src="/assets/images/icons/arrowRight.svg" alt="Biểu tượng Xem thêm">
+                </div>
+              </a>
+              <!-- //로그인한 사용자 정보 -->
+
+              <!-- 10월 1주차 수정사항 - PC모드에서는 아래 글쓰기 / 포인트 페이지 이동 버튼 비활성화로 보이지 않습니다. -->
+              <!-- 글쓰기 / 포인트 페이지 이동 버튼 -->
+              <div class="btn_box">
+                <button class="submit_btn" onclick="location.href='/board/create.html'"><img src="/assets/images/icons/plus_white.svg" alt="Bài đăng">Bài đăng</button>                
+                <button class="point_btn" onclick="location.href='/user/point.html'"><img src="/assets/images/icons/redeem.svg" alt="point icon">Point</button>                
+              </div>
+
+              <!-- 10월 1주차 수정사항 - PC모드에서만 활성화되는 아이콘 + 텍스트 버튼 영역(마이페이지 / 출석체크 / 포인트 / 이벤트) -->
+              <div class="icon_btn_box">
+                <div class="icon_btn" onclick="location.href='/user/mypage.html'">
+                  <img src="/assets/images/icons/account.svg" alt="Biểu tượng My page">
+                  <span>My page</span><!-- 마이페이지 -->
+                </div>
+                <div class="icon_btn" onclick="location.href='/user/attendance.html'">
+                  <img src="/assets/images/icons/calendar_primary.svg" alt="Biểu tượng Điểm danh">
+                  <span>Điểm danh</span><!-- 출석체크 -->
+                </div>
+                <div class="icon_btn" onclick="location.href='/user/point.html'">
+                  <img src="/assets/images/icons/redeem.svg" alt="Biểu tượng point">
+                  <span>Point</span><!-- 포인트 -->
+                </div>
+                <div class="icon_btn" onclick="location.href='/event/main.html'">
+                  <img src="/assets/images/icons/event_primary.svg" alt="Biểu tượng Sự kiện">
+                  <span>Sự kiện</span><!-- 이벤트 -->
+                </div>
+              </div>
+
+              <!-- 게시글 작성하기 버튼 -->
+              <!-- <button class="submit_btn" onclick="location.href='/board/create.html'">Bài đăng</button> -->
+              <nav>
+                <ul>
+                  <!-- 사이드 바 메뉴 활성화된 상태로 표시 -->
+                  <li class="gnb"><div class="gnb_btn active">Yêu thích<span><img src="/assets/images/icons/arrowDown.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 즐겨찾기 -->
+                    <div class="lnb active">
+                      <div><a href="/board/main.html">Thông báo</a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Xem thêm"></span></div><!-- 공지사항 -->
+                      <div><a href="/event/main.html">Sự kiệ</a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 이벤트 -->
+                    </div>
+                  </li>
+                  <li class="gnb"><div class="gnb_btn active">Truy cập gần đây<span><img src="/assets/images/icons/arrowDown.svg" alt="Biểu tượng Xem thêm"></span></div><!-- 최근방문 -->
+                    <div class="lnb active">
+                      <div class="sub_category">Chính thức</div><!-- 공식게시판(클릭x) -->
+                      <div><a href="/board/main.html">Thông báo</a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 공지사항 -->
+                      <div><a href="/event/main.html">Sự kiệ</a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 이벤트 -->
+                      <div class="sub_category">Bảng tin fan</div><!-- 팬게시판(클릭x) -(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Bảng tin tự do<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 자유게시판 -->
+                      <div><a href="/board/main.html">Đánh giá<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 후기게시판 -->
+                      <div><a href="/board/main.html">Hỏi đáp<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 질문게시판(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Chia sẻ thông tin<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 소식공유 -->
+                      <div><a href="/user/attendance.html">Điểm danh<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 출석체크 -->
+                    </div>
+                  </li>
+                  <!-- 전체 -->
+                  <li class="gnb"><div class="gnb_btn active">Gần đây Lượt truy cập<span><img src="/assets/images/icons/arrowDown.svg" alt="Biểu tượng Xem thêm"></span></div><!-- 전체게시판 -->
+                    <div class="lnb active">
+                      <div class="sub_category">Chính thức</div><!-- 공식게시판(클릭x) -->
+                      <div><a href="/board/main.html">Thông báo</a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 공지사항 -->
+                      <div><a href="/event/main.html">Sự kiệ</a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 이벤트 -->
+                      <div class="sub_category">Bảng tin fan</div><!-- 팬게시판(클릭x) -(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Bảng tin tự do<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 자유게시판 -->
+                      <div><a href="/board/main.html">Đánh giá<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 후기게시판 -->
+                      <div><a href="/board/main.html">Hỏi đáp<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 질문게시판(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Chia sẻ thông tin<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 소식공유 -->
+                      <div><a href="/user/attendance.html">Điểm danh<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 출석체크 -->
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="sidebar_bottom">
+                <button class="logout_btn">Logout</button>
+              </div>
+            </div>
+          </div>
+          <!-- // 사이드 바 메뉴 (햄버거 버튼 메뉴) -->
+        </div>        
+      </div>
+    </header>
+
+    <!-- 9월 5주차 수정사항 - 아래 main태그에 attendance_main 클래스 추가 -->
+    <main class="attendance_main">
+      <!-- main_tab 메뉴 -->
+      <div class="main_tab_cont main">
+        <ul class="main_tab_list scroll">
+          <li class="main_tab"><a href="/board/main.html" class="subtitle2">Home</a></li>
+          <li class="main_tab"><a href="/board/latest.html" class="subtitle2">Mới</a></li> <!-- 최신순 -->
+          <li class="main_tab"><a href="/board/latest.html" class="subtitle2">Nổi bật</a></li><!-- 추천순 -->
+          <li class="main_tab"><a href="/board/official.html" class="subtitle2">Chính thức</a></li><!-- 공식게시판 -->
+          <li class="main_tab active"><a href="#" class="subtitle2">Bảng tin fan</a></li><!-- 팬게시판 -->
+        </ul>
+      </div>
+      <!-- // main tab -->
+      
+      <!-- 9월 5주차 수정사항 - PC 반응형 구조를 위해 div.attendance_main_box 추가하여 하위 요소 감싸줍니다. -->
+      <div class="main_inner_box">
+        <div class="attendance_main_box">
+  
+          <!-- 9월 5주차 수정사항 - PC모드 > 게시판 페이지 타이틀추가 -->
+          <div class="board_header point">
+            <h3>Điểm danh</h3>
+          </div>
+          <!-- 공식게시판/팬게시판에 추가되는 하위 게시판 카테고리 -->
+          <!-- sub category tab -->
+          <div class="main_tab_cont sub">
+            <ul class="main_tab_list scroll">
+              <li class="main_tab"><span>Thảo luận chung</span></li><!-- 전체 -->
+              <li class="main_tab"><span>Bảng tin tự do</span></li><!-- 자유게시판 -->
+              <li class="main_tab"><span>Đánh giá</span></li><!-- 후기게시판 -->
+              <li class="main_tab"><span>Chia sẻ thông tin</span></li><!-- 소식공유 -->
+              <li class="main_tab"><span class="subtitle2">Hỏi đáp</span></li><!-- 질문게시판 -->
+              <li class="main_tab active"><span>Điểm danh</span></li><!-- 출석체크 -->
+            </ul>
+          </div>
+          <!-- // sub category tab -->
+    
+          <div class="attendance_border_box">
+            <section class="attendance_sec">
+              <h2 class="title3">Điểm danh</h2> <!-- 모바일모드용 타이틀 - 출석체크 -->
+              <div class="attendance_table">
+                <div class="table_tit"><h3>Sự kiện điểm danh mỗi ngày</h3></div>
+                <!-- 출석 체크 일주일 요일별 타일 리스트 -->
+                <!-- 09/16 - 출석체크 UI & 텍스트 변경 -->
+                <div class="check_attendance_box">
+                  <div class="check_day_list">
+                    <div class="check_day_item">MON</div>
+                    <div class="check_day_item">TUE</div>
+                    <div class="check_day_item">WED</div>
+                    <div class="check_day_item">THU</div>
+                    <div class="check_day_item">FRI</div>
+                    <div class="check_day_item">SAT</div>
+                    <div class="check_day_item">SUN</div>
+                  </div>
+                  <p>Điểm danh 7 ngày liên tiếp để nhận điểm thưởng!</p>
+                  <p>Điểm danh sẽ được làm mới vào thứ Hai hằng tuần.</p>
+                </div>
+              </div>
+            </section>
+            <div class="divide_line"></div>
+            <!-- comments -->
+            <section class="comments">
+              <h2 class="visually_hidden">Bình luận</h2>
+              <!-- Register comments 덧글 작성 & 등록 영역 -->
+              <div class="comment_form">
+                <div class="register_comment_box comment">
+                  <div class="commenting_user">
+                    <img src="/assets/images/detail/profile03.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                    <span class="nickname">V1official</span> <!-- nickname -->
+                  </div>
+                  <textarea placeholder="Hãy để lại bình luận của bạn"></textarea>
+                  <div class="commenting_options">
+                    <div>
+                      <span class="cancel_btn">Hủy</span><!-- 취소 -->
+                      <button type="button" class="submit_btn disabled">Đăng bài</button> <!-- 등록 -->
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <!-- // 덧글 작성 & 등록 영역 -->
+      
+              <!-- 덧글/댓글 정렬 기준 -->
+              <ul class="order_list comments">
+                <li class="active">Mới nhất</li><!-- 최신순 -->
+                <li>|</li>
+                <li>Đề xuất</li><!-- 추천순 -->
+              </ul>
+              <ul class="comments_list">  
+                <!-- Comment unit 덧글 단위 -->     
+                <li class="comment_item">
+                  <div class="comment_box">
+                    <div class="commenting_header">
+                      <div class="commenting_user">
+                        <img src="/assets/images/detail/profile02.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <div>
+                          <div class="nickname">Đoàn xiếc V1</div> <!-- nickname -->
+                          <div class="upload_date"><span>05.08.2025</span><span>|</span><span>15:08:46</span></div><!-- 작성일자(dd.mm.yyyy) & 작성일시(hh:mm:ss) -->
+                        </div>
+                      </div>
+                      <!-- // 덧글/댓글 작성자 정보 및 작성일자일시 표시 -->
+                      
+                    </div>
+                    <textarea placeholder="Hãy để lại bình luận của bạn"></textarea><!-- 덧글/댓글 수정 textarea -->
+                    <div class="commenting_contents">
+                      <p>Xin chào! Điểm danh.</p><!-- 덧글/댓글 텍스트 내용 -->
+                                  
+                      <div class="commenting_bottom">
+                        <div><span class="send_comment">Trả lời</span></div> <!-- 덧글 작성 -->
+                        <div>|</div>
+                        <div><span class="edit_comment">Chỉnh sửa</span></div><!-- 덧글 수정 -->
+                        <div>|</div>
+                        <div><span class="delete_comment">Xóa</span></div><!-- 덧글 삭제 -->
+                        <!-- // Reply button -->
+                        
+                        <div><span class="like_comment"><img src="/assets/images/icons/like_comment.svg" alt="Biểu tượng thích bình luận"><span class="like_comments_count">20</span></span></div><!-- 좋아요 하트 아이콘 & 좋아요 숫자 표시 -->
+                      </div>
+                    </div>
+                    <!-- // 덧글/댓글 콘텐츠 영역 -->
+      
+                    <!-- 덧글/댓글 수정/등록 영역으로 활성화될때 취소/등록 버튼 -->
+                    <div class="commenting_options">
+                      <div>
+                        <span class="cancel_btn">Hủy</span><!-- 취소 -->
+                        <button type="button" class="submit_btn">Đăng bài</button><!-- 등록 -->
+                      </div>
+                    </div>
+                  </div>
+                </li> 
+                <!-- // Comment unit 덧글 단위 -->    
+      
+                <!-- .send_comment(Trả lời)답글 버튼 클릭시, 답글 버튼이 클릭된 li.comment_item 바로 뒤에 새로 생성 및 추가되는 li.comment_item.reply - 댓글/대댓글 등록 영역 -->          
+                <!-- 댓글/대댓글 작성&등록 unit -->
+                <li class="comment_item reply d_none">
+                  <img src="/assets/images/icons/replrArrow.svg" alt="Biểu tượng Trả lời" class="reply icon">
+                  <div class="comment_box active">
+                    <div class="commenting_header">
+                      <div class="commenting_user">
+                        <img src="/assets/images/detail/profile02.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <div>
+                          <div class="nickname">reply456</div> <!-- nickname -->
+                          <div class="upload_date"><span>05.08.2025</span><span>|</span><span>15:08:46</span></div><!-- 작성일자(dd.mm.yyyy) & 작성일시(hh:mm:ss) -->
+                        </div>
+                      </div>
+                      <!-- // 덧글/댓글 작성자 정보 및 작성일자일시 표시 -->
+                    </div>
+                    <textarea placeholder="Hãy để lại bình luận của bạn"></textarea><!-- 덧글/댓글 수정 textarea -->
+      
+                    <!-- 덧글/댓글 수정/등록 영역 취소/등록 버튼 -->
+                    <div class="commenting_options">
+                      <div>
+                        <span class="cancel_btn">Hủy</span><!-- 취소 -->
+                        <button type="button" class="submit_btn">Đăng bài</button><!-- 등록 -->
+                      </div>
+                    </div>
+                  </div>
+                </li> 
+                <!-- 댓글/대댓글 등록 unit -->   
+      
+                <!-- 댓글/대댓글 등록 후 unit -->
+                <li class="comment_item reply">
+                  <img src="/assets/images/icons/replrArrow.svg" alt="Biểu tượng Trả lời" class="reply icon">
+                  <div class="comment_box">
+                    <div class="commenting_header">
+                      <div class="commenting_user">
+                        <img src="/assets/images/detail/profile02.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <div>
+                          <div class="nickname">reply456</div> <!-- nickname -->
+                          <div class="upload_date"><span>05.08.2025</span><span>|</span><span>15:08:46</span></div><!-- 작성일자(dd.mm.yyyy) & 작성일시(hh:mm:ss) -->
+                        </div>
+                      </div>
+                      <!-- // 덧글/댓글 작성자 정보 및 작성일자일시 표시 -->
+                    </div>
+                    <textarea placeholder="Hãy để lại bình luận của bạn"></textarea><!-- 덧글/댓글 수정 textarea -->
+                    <div class="commenting_contents">
+                      <p><span class="to_whom">Đoàn xiếc V1</span> Xin chào :0</p>
+                
+                      <div class="commenting_bottom">
+                        <div><span class="send_comment">Trả lời</span></div> <!-- 덧글 작성 -->
+                        <div>|</div>
+                        <div><span class="report_comment">Báo cáo</span></div><!-- 덧글 신고 -->
+                        <!-- // Reply button -->
+                        
+                        <div><span class="like_comment"><img src="/assets/images/icons/like_comment.svg" alt="Biểu tượng thích bình luận"><span class="like_comments_count">20</span></span></div><!-- 좋아요 하트 아이콘 & 좋아요 숫자 표시 -->
+                      </div>
+                    </div>
+                    <!-- // 덧글/댓글 콘텐츠 영역 -->
+                  </div>
+                </li> <!-- 댓글/대댓글 등록 unit -->
+                <!-- // 등록된 댓글/덧글 단위 -->      
+      
+                <!-- Reply unit -->
+                <li class="comment_item reply">
+                  <img src="/assets/images/icons/replrArrow.svg" alt="Biểu tượng Trả lời" class="reply icon">
+                  <div class="comment_box">
+                    <div class="commenting_header">
+                      <div class="commenting_user">
+                        <img src="/assets/images/detail/profile03.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <div>
+                          <div class="nickname">Baker Đỉnh vãi</div> <!-- nickname -->
+                          <div class="upload_date"><span>06.08.2025</span><span>|</span><span>17:39:23</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <textarea placeholder="Hãy để lại bình luận của bạn"></textarea><!-- 덧글/댓글 수정 textarea -->              
+                    <div class="commenting_contents">
+                      <!-- 댓글/대댓글의 경우, 누구의 덧글 또는 댓글에 대한 것인지 원 덧글/댓글 작성자 닉네임 표시 - p태그 내에 span.to_whom 추가 -->
+                      <p><span class="to_whom">Đoàn xiếc V1</span> Xin chào~~~</p>
+                      <!-- 08/25 수정사항 -->
+                      <!-- 댓글 신고 버튼 및 구분선 추가 -->
+                      <div class="commenting_bottom">
+                        <div><span class="send_comment">Trả lời</span></div> <!-- 덧글 작성 -->
+                        <div>|</div>
+                        <div><span class="report_comment">Báo cáo</span></div><!-- 덧글 신고 -->
+                        <!-- // Reply button -->
+                        
+                        <div><span class="like_comment"><img src="/assets/images/icons/likeFill_red.svg" alt="Biểu tượng thích bình luận"><span class="like_comments_count">12</span></span></div><!-- 좋아요 하트 아이콘 & 좋아요 숫자 표시 -->
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- // Reply unit -->
+      
+                <!-- 댓글/대댓글 등록 unit -->
+                <li class="comment_item reply">
+                  <img src="/assets/images/icons/replrArrow.svg" alt="Biểu tượng Trả lời" class="reply icon">
+                  <div class="comment_box">
+                    <div class="commenting_header">
+                      <div class="commenting_user">
+                        <img src="/assets/images/detail/profile02.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <div>
+                          <div class="nickname">Bakerfan</div> <!-- nickname -->
+                          <div class="upload_date"><span>05.08.2025</span><span>|</span><span>15:08:46</span></div><!-- 작성일자(dd.mm.yyyy) & 작성일시(hh:mm:ss) -->
+                        </div>
+                      </div>
+                      <!-- // 덧글/댓글 작성자 정보 및 작성일자일시 표시 -->
+                    </div>
+                    <textarea placeholder="Hãy để lại bình luận của bạn"></textarea><!-- 덧글/댓글 수정 textarea -->
+                    <div class="commenting_contents">
+                      <p><span class="to_whom">Đoàn xiếc V1</span> Xin chào!!!</p>
+                
+                      <div class="commenting_bottom">
+                        <div><span class="send_comment">Trả lời</span></div> <!-- 덧글 작성 -->
+                        <div>|</div>
+                        <div><span class="report_comment">Báo cáo</span></div><!-- 덧글 신고 -->
+                        <!-- // Reply button -->
+                        
+                        <div><span class="like_comment"><img src="/assets/images/icons/like_comment.svg" alt="Biểu tượng thích bình luận"><span class="like_comments_count">7</span></span></div><!-- 좋아요 하트 아이콘 & 좋아요 숫자 표시 -->
+                      </div>
+                    </div>
+                    <!-- // 덧글/댓글 콘텐츠 영역 -->
+      
+                    <!-- 덧글/댓글 수정/등록 영역으로 활성화될때 취소/등록 버튼 -->
+                    <div class="commenting_options">
+                      <div>
+                        <span class="cancel_btn">Hủy</span><!-- 취소 -->
+                        <button type="button" class="submit_btn">Đăng bài</button><!-- 등록 -->
+                      </div>
+                    </div>
+                  </div>
+                </li> <!-- 댓글/대댓글 등록 unit -->
+                <!-- // .send_comment(Trả lời)답글 버튼 클릭시 활성화 되는 등록 영역 -->  
+                
+                <li class="comment_item reply">
+                  <img src="/assets/images/icons/replrArrow.svg" alt="Biểu tượng Trả lời" class="reply_icon">
+                  <div class="comment_box">
+                    <div class="commenting_header">
+                      <div class="commenting_user">                      
+                        <img src="/assets/images/detail/profile01.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <ul>
+                          <li class="nickname">Baker Đỉnh vãi</li> <!-- nickname -->
+                          <li class="upload_date"><span>06.08.2025</span><span>|</span><span>17:39:23</span></li>
+                        </ul>
+                      </div>
+                      <!-- // Set comments options -->
+                    </div>
+                    <textarea placeholder="Hãy để lại bình luận của bạn"></textarea><!-- 덧글/댓글 수정 textarea -->              
+                    <div class="commenting_contents">
+                      <p><span class="to_whom">Bakerfan</span> Điểm danh.</p>
+                      <div class="commenting_bottom">
+                        <div><span class="send_comment">Trả lời</span></div> <!-- 덧글 작성 -->
+                        <div>|</div>
+                        <div><span class="report_comment">Báo cáo</span></div><!-- 덧글 신고 -->
+                        <!-- // Reply button -->
+                        
+                        <div><span class="like_comment"><img src="/assets/images/icons/likeFill_red.svg" alt="Biểu tượng thích bình luận"><span class="like_comments_count">12</span></span></div><!-- 좋아요 하트 아이콘 & 좋아요 숫자 표시 -->
+                      </div>
+                    </div>
+                  </div>
+                </li>
+      
+                <li class="comment_item reply">
+                  <img src="/assets/images/icons/replrArrow.svg" alt="Biểu tượng Trả lời" class="reply icon">
+                  <div class="comment_box">
+                    <div class="commenting_header">
+                      <div class="commenting_user">
+                        <img src="/assets/images/detail/profile03.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <div>
+                          <div class="nickname">Baker Đỉnh vãi</div> <!-- nickname -->
+                          <div class="upload_date"><span>06.08.2025</span><span>|</span><span>17:39:23</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <textarea placeholder="Hãy để lại bình luận của bạn"></textarea><!-- 덧글/댓글 수정 textarea -->              
+                    <div class="commenting_contents">
+                      <p>Tập mới của phim "Lovely Runner" quá đỉnh! Không thể chờ tập sau.</p>
+      
+                      <div class="commenting_bottom">
+                        <div><span class="send_comment">Trả lời</span></div> <!-- 덧글 작성 -->
+                        <div>|</div>
+                        <div><span class="report_comment">Báo cáo</span></div><!-- 덧글 신고 -->
+                        <!-- // Reply button -->
+                        
+                        <div><span class="like_comment"><img src="/assets/images/icons/likeFill_red.svg" alt="Biểu tượng thích bình luận"><span class="like_comments_count">12</span></span></div><!-- 좋아요 하트 아이콘 & 좋아요 숫자 표시 -->
+                      </div>
+                    </div>
+                  </div>
+                </li>
+      
+                <!-- 삭제 댓글 -->
+                <li class="comment_item reply">
+                  <img src="/assets/images/icons/replrArrow.svg" alt="Biểu tượng Trả lời" class="reply_icon">
+                  <div class="comment_box">
+                    <div class="commenting_header">
+                      <div class="commenting_user">                      
+                        <img src="/assets/images/detail/profile01.png" alt="Ảnh đại diện của người dùng"> <!-- Profile -->
+                        <ul>
+                          <li class="nickname">Baker Đỉnh vãi</li> <!-- nickname -->
+                          <li class="upload_date"><span>06.08.2025</span><span>|</span><span>17:39:23</span></li>
+                        </ul>
+                      </div>
+                      <!-- // Set comments options -->
+                    </div>
+                    <div class="commenting_contents deleted">
+                      <p>Bình luận này đã bị xóa.</p><!-- 삭제된 댓글입니다. -->
+                    </div>
+                  </div>
+                </li>
+                <!-- // 삭제 댓글 -->
+              </ul>
+              <!-- // Comment list -->
+              
+              <!-- 아래 덧글/댓글 더보기 버튼 추가 -->
+              <span class="view_more_comments">Bình luận Xem thêm<img src="/assets/images/icons/plus.svg" alt="bình luận Xem thêm"></span>
+              <!-- // 아래 덧글/댓글 더보기 버튼 추가 -->
+            </section>
+            <!-- //comments -->
+          </div>
+        </div>
+  
+        <!-- 오른쪽 사이드 영역 -->
+        <aside class="user_panel">
+          <div class="panel_top">
+            <div class="user_info">
+              <div class="profile">
+                <img src="/assets/images/main/banner01.png" alt="Ảnh đại diện của người dùng"> <!-- Profile image -->
+                
+                <ul>
+                  <li class="nickname">userNickname</li> 
+                  <li class="user_point">1,200P</li>
+                </ul>
+              </div>
+              <span class="logout_btn"><img src="/assets/images/icons/logout.svg" alt="Biểu tượng Đăng xuất"></span>
+            </div>
+            <div class="btn_box">
+              <!-- 아래 출석체크 페이지 이동경로는 임시경로로, 팬게시판 > 출석체크 페이지 경로로 변경해주세요. -->
+              <button class="attend_btn" onclick="location.href='/user/edit_mypage.html'"><img src="/assets/images/icons/account.svg" alt="My page">My page</button><!-- 출석체크 버튼 -->               
+              <button class="point_btn" onclick="location.href='/user/point.html'"><img src="/assets/images/icons/redeem.svg" alt="point icon">Point</button><!-- 포인트 버튼 -->  
+            </div>
+          </div>
+          <a href="/user/attendance.html" class="go_attendance_btn"><img src="/assets/images/icons/calendar.svg" alt="Biểu tượng Điểm danh">Điểm danh</a>
+          <div class="side_banner">
+            <img src="/assets/images/main/viewing.png" alt="banner image">
+          </div>
+  
+          <!-- 로그인한 사용자가 작성한 게시글 목록 요약 -->
+          <section class="main_section board">
+            <div class="board_top">
+              <div class="top_left">
+                <h2 class="body4">Đề xuất</h2>
+              </div>
+              <a class="top_right view_more_btn" href="/board/official.html">
+                <span class="body3">Xem thêm</span>
+                <img src="/assets/images/icons/arrowRight20_gray.svg" alt="Biểu tượng Xem thêm">
+              </a>
+            </div>
+            <ul>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="board_category">Chính thức</span>
+                    <h3 class="article_tit body4">Thông tin</h3>
+                    <p class="comment_count body4">[24]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="board_category">Bảng tin tự do</span>
+                    <h3 class="article_tit body4">Đội tuyển V1 chiến thắng áp đảo</h3>
+                    <p class="comment_count body4">[8]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Hướng dẫn</span>
+                    <h3 class="article_tit body4">Album mới phát hành!!</h3>
+                    <p class="comment_count body4">[13]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Đánh giá</span>
+                    <h3 class="article_tit body4">Những khoảnh khắc cảm động trong concert cuối cùng của ASTRO</h3>
+                    <p class="comment_count body4">[750]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Chính thức</span>
+                    <h3 class="article_tit body4">Lịch thi đấu vòng playoff VPC Mùa Hè 2025 được công bố chính thức</h3>
+                    <p class="comment_count body4">[7]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Bảng tin tự do</span>
+                    <h3 class="article_tit body4">Review tập 5 phim “Marry My Husband”</h3>
+                    <p class="comment_count body4">[56]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Đánh giá</span>
+                    <h3 class="article_tit body4">Sự kiện hot!</h3>
+                    <p class="comment_count body4">[34]</p>
+                  </a>
+                </article>
+              </li>
+            </ul>
+          </section>
+  
+          <!-- 공지사항 -->
+          <section class="main_section board">
+            <div class="board_top">
+              <div class="top_left">
+                <h2 class="body4">Thông báo</h2>
+              </div>
+              <div class="top_right">
+                <span class="body3"><span class="current_page">1</span>/<span class="total_page_count">4</span></span>
+                <div class="left_right_btns">
+                  <span><img src="/assets/images/icons/arrowLeft_gray.svg" alt="Biểu tượng trước đó"></span>
+                  <span><img src="/assets/images/icons/arrowRight20_gray.svg" alt="Biểu tượng tiếp theo"></span>
+                </div>
+              </div>
+            </div>
+            <ul class="official_post_list">
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="post_thumbnail"><img src="/assets/images/main/vip.png" alt="thumbnail image"></span><h3 class="article_tit body4">New VIP Package Open!</h3>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="post_thumbnail"><img src="/assets/images/main/viewing.png" alt="thumbnail image"></span>
+                    <h3 class="article_tit body4">🍀 DỰ ĐOÁN KẾT QUẢ TRẬN ĐẤU - V1 vs DK 🍀</h3>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="post_thumbnail"><img src="/assets/images/main/banner03.png" alt="thumbnail image"></span>
+                    <h3 class="article_tit body4">THÔNG BÁO CHÍNH THỨC VỀ ĐỊA ĐIỂM & THỜI GIAN NHẬN VÉ CỦA SỰ KIỆN VIEWING PARTY THÁNG 09</h3>
+                  </a>
+                </article>
+              </li>
+            </ul>
+          </section>
+  
+          <button class="submit_btn" onclick="location.href='/board/create.html'"><img src="/assets/images/icons/plus_white.svg" alt="Bài đăng">Bài đăng</button><!-- 글 작성하기 버튼 -->
+        </aside>        
+      </div>
+      <!-- // main_inner_box -->
+    </main>
+
+    <!-- 9월 5주차 수정사항 - footer 추가 -->
+    <footer class="main_footer">
+      <a href="#" class="footer_logo"><img src="/assets/images/main/logo_white.png" alt="JEJE logo"></a>
+      <div class="footer_cont">
+        <ul>
+          <li>
+            <a href="/user/terms_of_use.html">Điều khoản sử dụng</a><!--이용약관-->
+            <span>|</span>
+<a href="/user/privacy.html">Chính sách bảo mật</a><!--개인정보처리방침-->
+            <span>|</span>
+            <a href="#">Trung tâm hỗ trợ</a><!--고객지원센터-->
+            <span>|</span>
+            <a href="#">Báo lỗi</a><!--오류 신고-->
+          </li>
+          <li>
+            <a href="#">Email liên hệ</a><!-- 문의메일 -->
+            <span>|</span>
+            <a href="#">jeje.email.com</a> <!-- 메일주소 -->
+          </li>
+        </ul>
+        <div class="copyright">
+          <p>Copyright ©  2025 JEJE All rights reserved.</p> <!-- 저작권 표시 -->
+          <p>Seoul, Korea</p><!-- 주소 -->
+        </div>
+      </div>
+    </footer>
+    
+    <!-- 9월 4주차 수정사항 - TOP 버튼 추가(PC모드에서만 활성화) -->
+    <span class="top_btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"><img src="/assets/images/icons/arrowTop_white.svg" alt="scroll to top button"></span>     
+    <!-- Bottom Navigation bar -->
+    <nav class="bottom_nav">
+      <ul>
+        <li><a href="/index.html"><img src="/assets/images/icons/home_white.svg" alt="Biểu tượng Trang chủ"><span>Home</span></a></li>
+        <li><a href="/board/main.html"><img src="/assets/images/icons/rising_white.svg" alt="Biểu tượng Tốt Nhất"><span>Best</span></a></li>
+        <li><a href="/board/create.html"><img src="/assets/images/icons/edit_white.svg" alt="Biểu tượng Tạo Bài"><span>Create</span></a></li>
+        <li><a href="/event/main.html"><img src="/assets/images/icons/event.svg" alt="Biểu tượng Sự kiện"><span>Event</span></a></li>
+        <li><a href="/user/mypage.html"><img src="/assets/images/icons/person_white.svg" alt="Biểu tượng Đội hình"><span>Mypage</span></a></li>                             
+      </ul>
+    </nav>   
+    <!-- //Bottom Navigation bar -->
+
+    <!-- 공통 모달 -->
+    <div class="modal_cont">
+
+      <!-- 삭제 버튼 클릭시 활성화 모달 내용 -->
+      <div class="modal_delete">
+        <p>Bạn có chắc muốn xóa không?</p>
+        <div class="btn_box">
+          <button class="cancel_btn">Hủy</button><!-- 취소 -->
+          <button class="delete_btn">Xóa</button><!-- 삭제 -->
+        </div>
+      </div>
+      
+      <!-- 신고 버튼 클릭시 활성화 모달 내용 -->
+      <div class="modal_report">
+        <p>Vui lòng chọn lý do báo cáo.<br>Báo cáo sai sự thật<br>có thể bị xử phạt.</p><!-- 허위신고에 대한 경고 문구 -->
+        <div class="report_list">
+          <label class="radio_label">
+            <input type="radio" name="option" value="option1">
+            <span class="custom_radio"></span>
+            <span class="radio_text">Hành vi phạm pháp / trái luật</span><!--불법, 위법 행위 -->
+          </label>
+          <label class="radio_label">
+            <input type="radio" name="option" value="option2">
+            <span class="custom_radio"></span>
+            <span class="radio_text">Bạo lực / Đe dọa</span><!-- 폭력적, 위협적 -->
+          </label>
+          <label class="radio_label">
+            <input type="radio" name="option" value="option3">
+            <span class="custom_radio"></span>
+            <span class="radio_text">Thù ghét / Phân biệt đối xử</span><!-- 혐오, 차별 -->
+          </label>
+          <label class="radio_label">
+            <input type="radio" name="option" value="option4">
+            <span class="custom_radio"></span>
+            <span class="radio_text">Nội dung tình dục</span><!-- 성적 콘텐츠 -->
+          </label>
+          <label class="radio_label">
+            <input type="radio" name="option" value="option5">
+            <span class="custom_radio"></span>
+            <span class="radio_text">Spam / Quảng cáo</span><!-- 스팸, 홍보 -->
+          </label>
+          <label class="radio_label">
+            <input type="radio" name="option" value="option6">
+            <span class="custom_radio"></span>
+            <span class="radio_text">Khác</span><!-- 기타 -->
+          </label>
+        </div>
+        <div class="btn_box">
+          <button class="cancel_btn">Hủy</button><!-- 취소 -->
+          <button class="report_btn" onclick="showSnackbar('Báo cáo đã được gửi. Cảm ơn bạn.', 3000, false);" disabled>Báo cáo</button><!-- 신고 -->
+        </div>
+      </div>                 
+    </div>
+    <!-- // modal -->
+
+    <div class="modal_cont logout">
+      <!-- 사이드바>로그아웃 버튼 클릭시 활성화 모달 내용 -->
+      <div class="modal_leave">
+        <p>Bạn có muốn đăng xuất không?</p>
+        <div class="btn_box">
+          <button class="cancel_btn">Hủy</button><!-- 취소 -->
+          <!-- 로그아웃 버튼 클릭시, 홈 - index.html로 이동 -->
+          <button class="leave_btn">Đăng xuất</button><!-- 로그아웃 -->
+        </div>
+      </div>
+    </div>
+    <!-- // modal -->
+
+    <!-- 토스트/스낵바 - 게시글 수정 / 삭제 / 신고 접수 / 로그아웃 안내 -->
+    <div class="snack_bar hide"></div> 
+    
+  </div>
+
+  <script>
+  // 화면상의 기능 구현을 위해 작성한 내용이므로 참고만 해주시기 바랍니다. 
+
+  // 09/16 - 요일별 체크 방식 => 체크한 일 차수로 계산하는 방식으로 변경
+  // 현재는 출석체크 클릭시마다 모두 출석 체크 스탬프 이미지로 변경되나,
+  // 실제 동작에서는 해당 회원이 몇일차까지 출석체크했는지에 따라 체크 가능한 영역 바뀜
+  // 출석체크 클릭시, 출석 체크 스탬프 이미지로 변경 
+  const checkDayItems = document.querySelectorAll(".check_day_item");
+
+  // 오늘 날짜 기준 요일을 가져옴 (0: 일요일 ~ 6: 토요일)
+  const today = new Date();
+  const todayIndex = today.getDay(); // 일요일 = 0, 월요일 = 1, ...
+
+  // 요일 순서: MON~SUN 기준으로 재정렬한 인덱스 매핑 (월요일 시작)
+  const dayIndexMap = [1, 2, 3, 4, 5, 6, 0]; // MON~SUN → JS 요일 기준으로 매핑
+
+  checkDayItems.forEach((dayEl, index) => {
+    // 요일 일치 시에만 클릭 이벤트 작동
+    if (dayIndexMap[index] === todayIndex) {
+      dayEl.classList.add("today"); // 시각적 구분용 클래스 (선택)
+
+      dayEl.addEventListener("click", () => {
+        // 이미 출석한 경우 다시 클릭 막기
+        if (dayEl.classList.contains("checked")) return;
+
+        dayEl.classList.add("checked");
+        dayEl.textContent = ""; // 요일 텍스트 제거
+        const img = document.createElement("img");
+        img.src = "/assets/images/icons/stamp.svg";
+        img.alt = "Tem điểm danh đã hoàn tất";
+        dayEl.appendChild(img);
+      });
+    }
+  });  
+  // const checkDay = document.querySelectorAll(".check_day_item");
+  // checkDay.forEach(day => day.addEventListener("click", () => {
+  //   day.classList.add("checked") // 클릭한 출석 체크 활성화
+  //   day.textContent = ""; // 요일 텍스트 제거
+  //   const img = document.createElement("img");
+  //   img.src = "/assets/images/icons/stamp.svg" // 출석 체크 스탬프 아이콘 이미지 경로
+  //   img.alt = "Tem điểm danh đã hoàn tất" // alt속성 추가 = 출석체크 완료 스탬프
+
+  //   day.appendChild(img) // 해당 요일 요소의 자식요소에 출석 체크 스탬프 이미지 태그 추가
+  // }))
+
+  
+  // ======================================================
+  // [BINDERS] 재사용 가능한 이벤트 바인더 묶음 (부분 트리에만 적용 가능)
+  // ======================================================
+
+  // ❤️ 좋아요 토글 (게시글/댓글 공통) — 클릭할 때마다 DOM에서 최신 상태를 읽고 토글
+  // - root: document 또는 특정 컨테이너(li.comment_item 등)
+  // - 상태 저장: 각 버튼에 data-liked="true|false"
+  // - 규칙: (0 제외) 기존값에서 +1 또는 -1만 수행
+  // - 0이면 숫자 숨김 + 테두리 하트, 1 이상이면 숫자 표시 + 채워진 하트
+  // ============================================
+  // [LIKE] 원본 로직을 개별 엘리먼트에 바인딩하는 헬퍼
+  //  - 중복 바인딩 방지(_likeBound)
+  // ============================================
+  function attachLikeHandler(btn) {
+    if (!btn || btn._likeBound) return; // 중복 바인딩 방지
+    btn._likeBound = true;
+
+    btn.addEventListener('click', (e) => {
+      const icon = e.currentTarget.querySelector('img');
+      const countSpan = e.currentTarget.querySelector('span'); // 첫 번째 span이 카운트
+      let count = parseInt(countSpan.textContent || '0', 10);
+
+      // 활성화 토글: like.svg / like_comment.svg → likeFill_red.svg
+      if (icon.src.includes('like.svg') || icon.src.includes('like_comment.svg')) {
+        icon.src = '/assets/images/icons/likeFill_red.svg'; // 활성화
+        count += 1; // 좋아요 +1
+        countSpan.textContent = String(count);
+        countSpan.classList.remove('d_none'); // 숫자 표시
+      } else {
+        // 비활성화 아이콘으로 복귀
+        if (e.currentTarget.classList.contains('like_comment')) {
+          icon.src = '/assets/images/icons/like_comment.svg';
+        } else {
+          icon.src = '/assets/images/icons/like.svg';
+        }
+        count = Math.max(0, count - 1);
+        countSpan.textContent = String(count);
+
+        if (count === 0) {
+          countSpan.classList.add('d_none'); // 숫자 숨김
+        } else {
+          countSpan.classList.remove('d_none'); // 숫자 표시
+        }
+      }
+    });
+  }
+
+
+  // ✏️ 덧글/댓글 수정 버튼(.edit_comment)
+  // - 기존 스크립트 로직을 그대로 따르되, 부분 트리에만 바인드 가능하게 모듈화
+  function bindEditButtons(root = document) {
+    root.querySelectorAll('.edit_comment').forEach(editBtn => {
+      if (editBtn._editBound) return;
+      editBtn._editBound = true;
+
+      editBtn.addEventListener('click', () => {
+        // 이미 열려있는 대댓글 입력영역 닫기
+        // const replyBox = editBtn.closest('.comment_item').querySelector('.register_comment_box.reply');
+        const replyBox = editBtn.closest('.comment_item').querySelector('.comment_box');
+        if (replyBox && replyBox.classList.contains('active')) {
+          replyBox.classList.remove('active');
+        }
+
+        const commenting = editBtn.closest('.comment_item').querySelector('.comment_box');
+        const currentText = commenting.querySelector('.commenting_contents p').textContent;
+        commenting.classList.add('active'); // 수정 영역으로 활성화
+        // commenting.classList.add('inactive'); // 기존 영역 비활성화
+        commenting.querySelector('textarea').value = currentText; // 기존 텍스트 주입
+      });
+    });
+  }
+
+  // 💬 Trả lời(답글) 버튼(.send_comment) → 대댓글 입력영역 새로 생성 및 ul.comments_list에 답글 버튼이 클릭된 해당 댓글/대댓글 바로 뒤에 li.comment_item.reply로 추가
+
+  // 
+  
+
+  // ❌ 삭제 버튼(.delete_comment) → 공통 삭제 모달 연동
+  function bindDeleteButtons(root = document) {
+    root.querySelectorAll('.delete_comment').forEach(deleteBtn => {
+      if (deleteBtn._deleteBound) return;
+      deleteBtn._deleteBound = true;
+
+      deleteBtn.addEventListener('click', () => {
+        // 공통 모달 열기 (기존 activateModal 사용)
+        activateModal();
+        document.querySelector('.modal_delete').classList.add('active');
+
+        // 모달의 "삭제" 버튼에 1회성 핸들러 연결
+        const modalDeleteBtn = document.querySelector('.modal_delete .delete_btn');
+        const handler = () => {
+          // 현재 댓글 영역 상태 갱신 (삭제 표시)
+          const contents = deleteBtn.closest('.comment_item').querySelector('.commenting_contents');
+          if (contents) {
+            // 답글 입력창이 열려있으면 닫기
+            const replyBox = deleteBtn.closest('.comment_item').querySelector('.register_comment_box.reply');
+            if (replyBox && replyBox.classList.contains('active')) {
+              replyBox.classList.remove('active');
+            }
+            contents.classList.add('deleted');
+            const p = contents.querySelector('p');
+            if (p) p.textContent = 'Bình luận này đã bị xóa.'; // "삭제된 댓글입니다."
+            const bottom = contents.querySelector('.commenting_bottom');
+            if (bottom) bottom.remove(); // 버튼/좋아요 행 제거
+          }
+          showSnackbar('Bài viết đã bị xóa. Đang quay lại trang trước.', 3000, false);
+
+          // 모달 닫기 트리거 (기존 공통 닫기 로직 호출 대상 중 하나 택1)
+          document.querySelector('.modal_delete .cancel_btn').click();
+        };
+
+        // 동일 버튼에 여러 번 중첩 바인딩 방지
+        modalDeleteBtn.addEventListener('click', handler, { once: true });
+      });
+    });
+  }
+
+  // 📝 textarea 입력 시, .submit_btn 활성/비활성(신규/대댓글 공통)
+  function bindTextareaState(root = document) {
+    root.querySelectorAll('.comment_form:not(.edit) textarea').forEach(ta => {
+      if (ta._taBound) return;
+      ta._taBound = true;
+
+      ta.addEventListener('input', () => {
+        const form = ta.closest('.comment_form');
+        const btn = form && form.querySelector('.submit_btn');
+        if (!btn) return;
+        const hasText = ta.value.trim().length > 0;
+        btn.classList.toggle('disabled', !hasText);
+      });
+    });
+  }
+  
+  // order post - Lastest(default) / Hot&Popular
+  const orderItems = document.querySelectorAll(".order_list li");
+  orderItems.forEach(item => item.addEventListener("click", (e) =>{
+    if(item.classList.contains("active")){
+      return;
+    }
+
+    const currentOrder = document.querySelector(".order_list li.active");
+    if(currentOrder){
+      currentOrder.classList.remove("active");
+    }
+
+    item.classList.add("active");        
+  }))
+
+  // 좋아요 ♥ 하트 아이콘 클릭 시, 아이콘 이미지 활성/비활성화 변경 & 좋아요 수 증가/감소
+  document.querySelectorAll('.like_btn, .like_comment').forEach(attachLikeHandler);
+
+  // 덧글/댓글 입력 영역 활성화 시, 덧글/댓글 입력 영역 UI 변경
+  document.querySelector('.register_comment_box.comment textarea').addEventListener('click', (e) => {      
+    if (!e.currentTarget.classList.contains('active')) {
+      const commentBox = e.currentTarget.closest('.register_comment_box');
+      commentBox.classList.add('active');
+      commentBox.querySelector('textarea').focus();
+    }
+  });
+
+  // 댓글 작성 버튼(Trả lời) 클릭시, 댓글 입력 영역 활성화
+  // 덧글과 댓글 갯수 확인(덧글이 있는 경우에만 활성화)
+  if(document.querySelector(".comments_list")){
+    const commentItems = document.querySelectorAll('.comments_list .comment_item');
+    if (commentItems.length > 0) {
+      document.querySelectorAll('.send_comment').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const commentBox = document.querySelector('.comment_item.d_none');
+          if(commentBox.classList.contains("d_none")){
+            commentBox.classList.remove("d_none");
+          }
+        });
+      });
+    }
+  }
+
+  // 덧글(가장 처음 쓰는 덧글) 입력 영역 내 취소 버튼(Hủy) 클릭 시, 댓글 입력 영역 비활성화
+  document.querySelector('.register_comment_box .cancel_btn').addEventListener('click', (e) => {
+      const commentBox = e.currentTarget.closest('.register_comment_box'); // 덧글 등록 영역
+      commentBox.classList.remove('active'); // 비활성화
+      commentBox.querySelector('textarea').value = ''; // 입력된 내용 초기화
+  });
+
+  // 덧글/댓글/대댓글 등록/수정 입력 영역으로 활성화된 상태일 때, 취소 버튼(Hủy) 클릭 시, 댓글 입력 영역 비활성화
+  document.querySelectorAll('.comment_box .cancel_btn').forEach(cancelBtn => cancelBtn.addEventListener('click', (e) => {
+      if(e.currentTarget.closest('.comment_item').classList.contains("edit")){ // 수정모드일때        
+        const commentBox = e.currentTarget.closest('.comment_box');
+        commentBox.classList.remove('active');
+        commentBox.querySelector('textarea').value = ''; // 입력된 내용 초기화
+      }else{
+        console.log("clicked_not_edit");
+        e.currentTarget.closest('.comment_item').classList.add("d_none"); // 수정모드가 아닌 일반 댓글/대댓글 작성 모드 일때는 해당 li.comment_item 안보이게 처리
+      }
+  }))  
+
+
+
+  // 모달 관련 이벤트
+  const darkBg = document.querySelector(".dark_bg"); // 모달 뒤 투명한 검은색 배경
+  const body = document.querySelector("body"); // body태그
+  const modalContainer = document.querySelector(".modal_cont"); // 공통 모달 영역
+  const selectPostMenu = document.querySelector(".select_menu ul"); // 게시글 ⋮ 더보기 메뉴
+
+  // 모달 비활성화 공통 함수 (중복 코드 제거용)
+  function closeModal(){
+    darkBg.classList.remove("active");
+    body.classList.remove("fixed");
+    modalContainer.classList.remove("active");
+    document.querySelectorAll(".modal_delete, .modal_link, .modal_report").forEach(modal => modal.classList.remove("active"));
+  }
+
+
+  // 모달 활성화 기본 설정
+  function activateModal(){
+    darkBg.classList.add("active"); // 모달 뒤 투명한 검은색 배경 활성화
+    body.classList.add("fixed"); // 모달 활성화시 스크롤 방지
+    modalContainer.classList.add("active"); // 모달 영역 활성화
+  }
+
+// ============================================
+// [STATE] 삭제 컨텍스트 (모달 '삭제' 클릭 시 참조)
+// ============================================
+let pendingDelete = null; // { type: 'post' | 'comment', itemEl?: HTMLElement|null }
+
+// ============================================
+// [POST] 게시글 삭제 메뉴(.delete_menu) 바인딩 - 1회성
+// ============================================
+(function bindPostDeleteMenu(){
+  document.querySelectorAll(".delete_menu").forEach(btn => {
+    if (btn._postDelBound) return; // 중복 바인딩 방지
+    btn._postDelBound = true;
+
+    btn.addEventListener("click", () => {
+      // 1) 컨텍스트 저장
+      pendingDelete = { type: "post" };
+
+      // 2) 모달 활성화
+      activateModal();
+      document.querySelector(".modal_delete").classList.add("active");
+    });
+  });
+})();
+
+// ============================================
+// [COMMENT] 댓글/답글 삭제(.delete_comment) 바인딩 - 재사용 바인더 사용
+//  - 새로 생성되는 요소는 buildCommentItem() 내부에서 bindDeleteButtons(li)로 부분 바인딩됨
+//  - 기존 정적 요소는 아래에서 초기 1회 바인딩
+// ============================================
+function bindDeleteButtons(root = document) {
+  root.querySelectorAll(".delete_comment").forEach(deleteBtn => {
+    if (deleteBtn._deleteBound) return; // 중복 바인딩 방지
+    deleteBtn._deleteBound = true;
+
+    deleteBtn.addEventListener("click", () => {
+      // 1) 컨텍스트 저장 (안전 가드 포함)
+      const itemEl = deleteBtn.closest(".comment_item");
+      pendingDelete = { type: "comment", itemEl: itemEl || null };
+
+      // 2) 모달 활성화
+      activateModal();
+      document.querySelector(".modal_delete").classList.add("active");
+    });
+  });
+}
+// 정적 영역 초기 바인딩
+bindDeleteButtons(document);
+
+// ============================================
+// [CONFIRM] 모달 삭제 확정 버튼 - 전역에서 '단 한 번'만 바인딩
+// ============================================
+(function bindModalConfirmOnce(){
+  const confirmBtn = document.querySelector(".modal_delete .delete_btn");
+  if (!confirmBtn || confirmBtn._bound) return;
+  confirmBtn._bound = true;
+
+  confirmBtn.addEventListener("click", () => {
+    try{
+      // 컨텍스트가 없으면 방어
+      if (!pendingDelete) {
+        console.warn("[delete] pendingDelete 없음");
+        closeModal();
+        return;
+      }
+
+      // 케이스 1) 게시글 삭제
+      if (pendingDelete.type === "post") {
+        showSnackbar('Bài viết đã bị xóa. Đang quay lại trang trước.', 3000, true); // 게시글 삭제일 경우에만 스낵바로 삭제 안내 문구 활성화
+        closeModal();
+        return;
+      }
+
+      // 케이스 2) 댓글/답글 삭제
+      if (pendingDelete.type === "comment") {
+        const item = pendingDelete.itemEl || null;
+        if (!item) {
+          console.warn("[delete] comment_item 없음");
+          closeModal();
+          return;
+        }
+
+        // (a) 열려있는 대댓글 입력영역이 있으면 닫기 (안전 가드 포함)
+        const replyBox = item.querySelector(".comment_box");
+        if (replyBox && replyBox.classList.contains("active")) {
+          replyBox.classList.remove("active");
+        }
+
+        // (b) 본문 영역을 '삭제됨' 상태로 변경
+        const contents = item.querySelector(".commenting_contents");
+        if (contents) {
+          contents.classList.add("deleted");
+          const p = contents.querySelector("p");
+          if (p) p.textContent = "Bình luận này đã bị xóa."; // '삭제된 댓글입니다'
+          const bottom = contents.querySelector(".commenting_bottom");
+          if (bottom) bottom.remove(); // 버튼/좋아요 DOM 제거
+        }
+
+        closeModal();
+        return;
+      }
+    } finally {
+      // 어떤 경우든 컨텍스트 정리
+      pendingDelete = null;
+    }
+  });
+})();
+
+  // 게시글 공유 메뉴 및 공유 아이콘 버튼 클릭시, 해당 모달 활성화
+  document.querySelectorAll(".share_btn").forEach(shareBtn => shareBtn.addEventListener("click", () => {
+      activateModal(); // 공통 모달창 활성화
+      document.querySelector(".modal_link").classList.add("active"); // 링크 공유 모달 활성화
+    })
+  )
+
+  // 게시글 신고 메뉴 및 답글/댓글 신고 버튼 클릭시, 해당 모달 활성화
+  document.querySelectorAll(".report_menu, .report_comment").forEach(shareBtn => shareBtn.addEventListener("click", () => {
+      activateModal(); // 공통 모달창 활성화
+      document.querySelector(".modal_report").classList.add("active"); // 신고 모달 활성화
+    })
+  )
+
+  // 신고 모달창 > 신고 유형 선택할 시, 하단 신고 버튼 활성화
+  document.querySelectorAll('input[type="radio"]').forEach(radioBtn => radioBtn.addEventListener("change", () => {
+      radioBtn.closest(".modal_report").querySelector(".report_btn").disabled = false;
+    })
+  )
+
+  // 신고 모달창 > 취소/신고 버튼, 배경 클릭시, 신고 모달 초기화
+  document.querySelectorAll('.report_btn, .modal_report .cancel_btn, .dark_bg').forEach(btn => btn.addEventListener("click", (e) => {
+      document.querySelector(".report_btn").disabled = true;
+      document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.checked = false;
+      });
+    })
+  )
+
+  // 게시글 ⋮ 더보기 메뉴 > 수정/삭제/링크공유 메뉴 클릭시, 게시글 ⋮ 더보기 메뉴 모달 비활성화
+  document.querySelectorAll(".select_menu > ul li").forEach(postMenu => postMenu.addEventListener("click", () => {
+    const selectPostMenu = document.querySelector(".select_menu ul"); 
+    selectPostMenu.classList.add("d_none"); // ⋮ 더보기 메뉴 비활성화
+  }))
+
+  // 모달 비활성화 클릭 이벤트(dark_bg 배경, close_btn 닫기, cancel_btn 취소, delete_btn 삭제, share_facebook_btn 페이스북 공유, link_copy_btn 링크복사)
+  document.querySelectorAll(".report_btn, .close_btn, .cancel_btn, .share_facebook_btn, .link_copy_btn, .dark_bg").forEach(closeModalBtn => closeModalBtn.addEventListener("click", () => {
+    closeModal();
+  }))
+
+  // 덧글 수정 버튼(.edit_comment) 클릭시, 덧글 수정 모드로 변경
+  document.querySelectorAll('.edit_comment').forEach(editBtn => editBtn.addEventListener("click", () => {
+    // 수정 버튼 클릭한 시점에 답글/댓글 작성 영역이 활성화되어 있는지 확인
+    // 이미 열려있는 대댓글 입력영역 닫기
+    const commentBox = document.querySelector('.comment_box.active'); // 입력 영역으로 활성화된 영역
+    commentBox.closest(".comment_item").classList.add("d_none") // 해당 li.comment_item 안보이게 처리
+    commentBox.querySelector('textarea').value = ''; // 입력된 내용 초기화
+
+    const commenting = editBtn.closest('.comment_item').querySelector('.comment_box'); // 수정 버튼 클릭한 덧글/댓글 영역
+    const currentText = commenting.querySelector('.commenting_contents p').textContent; // 기존 입력한 텍스트 내용
+    editBtn.closest('.comment_item').classList.add("edit"); // 수정 상태임을 알 수 있는 edit 클래스 추가
+    commenting.classList.add('active'); // 수정 영역으로 활성화
+    // commenting.classList.add('inactive'); // 기존 영역 비활성화
+    commenting.querySelector('textarea').value = currentText; // 기존 텍스트 주입
+  }))
+
+  // 답글/댓글 작성 영역 내 내용 입력시, 답글/댓글 등록(Đăng bài) 버튼 활성화
+  const textareas = document.querySelectorAll(".comment_form:not(.edit) textarea");
+
+  textareas.forEach(textarea => {
+    textarea.addEventListener("input", () => {
+      const form = textarea.closest(".comment_form");
+      const button = form.querySelector(".submit_btn");
+
+      if (textarea.value.trim().length > 0) { // 내용 입력된 상태면
+        // button.type = "submit";
+        button.classList.remove("disabled");
+      } else { // 미입력 상태라면
+        // button.type = "button";
+        button.classList.add("disabled");
+      }
+    })
+  });
+  
+
+  // 답글/댓글 등록(Đăng bài) 버튼 클릭시 , 작성한 답글/댓글 화면에 표시
+  // textarea에 미입력 상태면 alert로 내용 입력하라고 안내
+  // textarea에 작성한 내용 가져오기
+  // 작성한 시간 데이터로 변경
+  // 작성자 프로필 이미지, 닉네임 데이터 반영
+  // 답글인지 댓글인지 구분하여 해당 unit 구조를 prepend를 사용하여 맨 첫 번째 목록으로 추가
+
+    // 9월 5주차 수정사항 - PC모드에서 출석체크가 게시판 탭으로 추가되면서 해당 페이지 
+    // 포인트 전체/적립/사용/안내 탭 활성&비활성화
+    // main tab - activate/inactivate a board category
+    const main_tab = document.querySelectorAll(".my_point .main_tab");
+
+    main_tab.forEach(tab => tab.addEventListener("click", (e) => {
+      const currentPage = document.querySelector(".page_num_btn.active");
+
+      // 항상 현재 활성화된 탭 비활성화 (guide든 아니든 상관없이)
+      const currentActiveTab = document.querySelector(".my_point .main_tab.active");
+      if (currentActiveTab) {
+        currentActiveTab.classList.remove("active");
+      }
+
+      // 현재 클릭한 탭을 활성화
+      tab.classList.add("active");
+
+      // 안내탭이 아닌 경우에만 point_list 활성화 및 point_guide 비활성화
+      if (!tab.classList.contains("guide")) {
+        document.querySelector(".point_guide").classList.remove("active"); // 안내탭 비활성화
+        document.querySelector(".point_list").classList.remove("d_none"); // 전체/적립/사용 탭 활성화
+      }
+
+      // 페이지가 1인데 같은 탭을 클릭하면 아무것도 하지 않음
+      if (tab.classList.contains("active") && currentPage.textContent == "1") {
+        return;
+      }
+
+      // 페이지가 1이 아닌 경우, 페이지를 1로 초기화
+      if (currentPage.textContent != "1") {
+        const defaultPage = document.querySelector(".page_num_btn");
+        currentPage.classList.remove("active");
+        defaultPage.classList.add("active");
+      }
+    }));
+  </script>
+</body>
+</html>

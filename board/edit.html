@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/common.js"></script>
+  <title>Fan Community</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="dark_bg"></div>
+    <div class="dark_bg_modal"></div>  
+    <header class="create_header">
+      <div class="header_cont">
+        <button class="close_btn" onclick="javascript:history.back(-1);">
+          <img src="/assets/images/icons/close.svg" alt="close button">
+        </button>
+        <div class="header_menu">
+          <button class="temp_save">
+            lưu bản nháp <span class="temp_save_count">8</span>
+          </button>
+          <button class="submit_btn" onclick="location.href='/board/detail.html'">Đăng bài</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="create_main">
+      <section class="create">
+        <h1 class="visually_hidden">Tạo bài viết</h1>
+        <form>
+          <div class="create_header">
+            <ul class="select_container">
+              <li class="select_board">
+                <!-- Bảng tin Chọn  -->
+                <span class="board_cate">Chính thức</span><img src="/assets/images/icons/arrowDown.svg"
+                  alt="arrow down">
+                <ul class="select_list board_category_list">
+                  <li>board category1</li>
+                  <li>board category2</li>
+                  <li>board category3</li>
+                </ul>
+              </li>
+              <!-- //select board category -->
+              <li class="select_post_type">
+                <span class="post_type">Hình ảnh</span><img src="/assets/images/icons/arrowDown.svg"
+                  alt="arrow down">
+                <ul class="select_list post_type_list">
+                  <li>board category1</li>
+                  <li>board category2</li>
+                  <li>board category3</li>
+                </ul>
+              </li>
+              <!-- //select post type -->
+            </ul>
+            <div class="create_title">
+              <div class="title_text_box"><textarea id="autoResize" rows="1" placeholder="Nhập tiêu đề bài viết của bạn"></textarea></div>
+            </div>
+            <ul class="editor_menu">
+              <li onclick="location.href='/board/create_img.html'"><img src="/assets/images/icons/image.svg" alt="Thêm hình ảnh"></li>
+              <li><img src="/assets/images/icons/video.svg" alt="Thêm video"></li>
+              <li><img src="/assets/images/icons/sticker.svg" alt="Thêm nhãn dán"></li>
+              <li onclick="location.href='/board/create_link.html'"><img src="/assets/images/icons/link.svg" alt="Thêm liên kết"></li>
+              <li><img src="/assets/images/icons/linkFile.svg" alt="Đính kèm tệp"></li>
+            </ul>
+          </div>
+          <div class="create_content" style="padding: 20px 16px;">
+
+            <p>Hôm nay mình muốn chia sẻ trải nghiệm đặc biệt khi lần đầu tiên tham gia fansign của SEVENTEEN tại Hà
+              Nội.<br>
+              Ngay từ lúc xếp hàng, không khí đã tràn ngập sự háo hức của các Carat.<br>
+              Nhân viên tổ chức rất chuyên nghiệp, mọi thứ diễn ra đúng giờ và trật tự.</p>
+            <!-- 첨부 이미지 단위 -->
+            <div class="attach_img">
+              <span class="remove_btn"><img src="/assets/images/icons/remove.svg" alt="remove image button"></span>
+              <img src="/assets/images/main/post_img.png" alt="attached image">
+            </div>
+            <!-- //첨부 이미지 단위 -->
+            <p style="padding-top: 12px;">Hôm qua mình xem concert online của BLACKPINK.<br>
+              Âm thanh và ánh sáng được dàn dựng cực kỳ chuyên nghiệp, nhìn qua màn hình thôi mà vẫn cảm nhận được sự
+              bùng nổ.<br>
+              Ước gì lần tới có thể tham dự trực tiếp!</p>
+          </div>
+          <div class="create_btn_box">
+            <button class="cancel_btn" onclick="javascript:history.back(-1);">Hủy</button>
+            <button class="submit_btn" onclick="location.href='/board/detail.html'">Đăng bài</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // resize post title textarea automatically
+    const textarea = document.getElementById("autoResize");
+    const maxRows = 5;
+    const lineHeight = 24;
+
+    textarea.addEventListener("input", function () {
+      this.style.height = "auto";
+      const lines = this.scrollHeight / lineHeight;
+
+      if (lines <= maxRows) {
+        this.style.height = `${this.scrollHeight}px`;
+      } else {
+        this.style.height = `${lineHeight * maxRows}px`;
+        this.style.overflowY = "scroll";
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/common.js"></script>
+  <title>Fan Community</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="dark_bg"></div><!--햄버거메뉴 활성화용-->    
+    <div class="dark_bg_modal"></div><!-- 로그아웃 모달창용 -->       
+    <header>
+      <div class="header_cont">
+        <a href="/index.html" class="logo">
+          <img src="/assets/images/main/logo.png" alt="JEJE logo">
+          <!-- 9월 4주차 수정사항 - PC모드에서 사용하는 로고 이미지 추가 -->
+          <img src="/assets/images/main/logo.png" alt="JEJE logo" class="web">
+          <p>JEJE</p>
+        </a>
+        <!-- 9월 4주차 수정사항 - 검색바(현재는 아직 사용하지 않으므로 주석처리 및 css에도 보이지 않도록 설정) -->
+        <!-- <div class="search_bar">
+          <span><img src="/assets/images/icons/search_white.svg" alt="Biểu tượng tìm kiếm"></span>
+          <input type="text" placeholder="Nhập từ khóa tìm kiếm">
+          <span><img src="/assets/images/icons/close_white.svg" alt="Biểu tượng xóa"></span>
+        </div> -->
+        <div class="header_menu">
+          <!-- 9월 4주차 수정사항 - PC 모드인 경우, 글 작성하기 활성화 -->
+          <div class="create_icon_btn"><a href="/board/create.html"><img src="/assets/images/icons/plus_white.svg" alt="Biểu tượng viết bài">Bài đăng</a></div><!-- 글쓰기 아이콘 메뉴 -->
+          <div class="alert_icon_btn">
+            <span class="icon_menu"><img src="/assets/images/icons/notification_white.svg" alt="Biểu tượng Thông báo"><span class="notify_count">6</span></span>
+            <!-- 10월 3주차 수정사항 - 알림 목록 UI 추가 -->
+            <div class="alert_box">
+              <div class="alert_list_top">
+                <h3 class="title3">Thông báo</h3>
+                <div class="alert_btn_box">
+                  <span class="read_all">Đã đọc tất cả</span><!-- 전체 읽음 -->
+                  <span class="delete_all">Xóa tất cả</span><!-- 전체 삭제 -->
+                </div>
+              </div>
+              <div class="alert_list_box">
+                <p class="no_alerts body4 d_none">Không có thông báo nào.</p><!-- 알림이 없는 경우, 표시되는 문구 -->
+                <ul class="alert_list">
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Bài viết của bạn vừa nhận được lượt thích.</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Thông báo]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner" quá đỉnh! da da da Không thể chờ tập sau.</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>1h ago</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Bài viết của bạn vừa nhận được lượt thích. (게시글에 추천이 올랐습니다.)</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Đề xuất]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Sự kiện tặng quà sinh nhật Jin</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>7h ago</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Bình luận]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner"포스트 타이틀포스트 타이틀 포스트 타이틀</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>1h ago</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long Lịch thi đấu vòng playoff VPC Mùa Hè 2025 thức on long</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Bình luận]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner"포스트 타이틀포스트 타이틀 포스트 타이틀</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>15.10.2025</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                  <li class="alert_item readed">
+                    <div class="alert_contents">
+                      <div class="alert_contents_top">
+                        <p class="alert_title">Bài viết của bạn vừa nhận được lượt thích.</p>
+                        <span class="delete_alert_btn">
+                          <img src="/assets/images/icons/close.svg" alt="Biểu tượng Xóa thông báo">
+                        </span>
+                      </div>
+                      <div class="alert_post_title">
+                        <span>[Thông báo]</span><!-- 알림이 발생한 유형(추천/댓글/새글 등) -->
+                        <p>Tập mới của phim "Lovely Runner" quá đỉnh! da da da Không thể chờ tập sau.</p><!-- 게시글  -->
+                      </div>
+                      <div class="alert_time">
+                        <span>14.10.2025</span> <!-- 알림 발생한 시간 (*24시간이전에는 시간으로, 이후는 날짜로) -->
+                        <span>|</span>
+                        <span>Tất cả</span> <!-- 게시판 분류 -->
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- 알림 아이콘 -->
+          
+
+          <!-- 사이드 바 메뉴 (햄버거 버튼 메뉴) -->
+          <div class="hamburger_menu">
+            <span class="icon_menu">
+              <img src="/assets/images/icons/menu_white.svg" alt="Biểu tượng hamburger menu">
+            </span>
+            <div class="nav">
+              <!-- 10월 1주차 수정사항 - PC모드 > 로그인 전 / 로그인 후 UI 적용을 위한 기존 UI 변경 및 추가 -->
+              <button class="submit_btn login_btn" onclick="location.href='/user/login.html'">Đăng nhập</button>
+              <!-- 10월 1주차 수정사항 - PC모드에서는 로그인 하지 않은 경우, 아래 a태그 비활성화로 보이지 않아야합니다. -->              
+              <!-- 로그인한 사용자 정보 및 클릭시 마이페이지 수정 페이지로 이동 -->
+              <a href="/user/edit_mypage.html" class="d_none">
+                <div class="user_info">
+                  <div class="profile">
+                    <!-- 로그인하지 않은 경우, 아래 기본 사용자 이미지 및 p태그 사용 -->
+                    <img src="/assets/images/icons/userUnknown.svg" alt="Ảnh đại diện của người dùng"> <!-- Profile image -->
+                    
+                    <!-- 로그인한 상태인 경우만 아래 ul>li 활성화 -->
+                    <ul>
+                      <li class="nickname">BakerĐỉnhvãi</li> 
+                      <li class="user_point">1,200P</li>
+                    </ul>
+                  </div>
+                  <img src="/assets/images/icons/arrowRight.svg" alt="Biểu tượng Xem thêm">
+                </div>
+              </a>
+              <!-- //로그인한 사용자 정보 -->
+
+              <!-- 10월 1주차 수정사항 - PC모드에서는 아래 글쓰기 / 포인트 페이지 이동 버튼 비활성화로 보이지 않습니다. -->
+              <!-- 글쓰기 / 포인트 페이지 이동 버튼 -->
+              <div class="btn_box">
+                <button class="submit_btn" onclick="location.href='/board/create.html'"><img src="/assets/images/icons/plus_white.svg" alt="Bài đăng">Bài đăng</button>                
+                <button class="point_btn" onclick="location.href='/user/point.html'"><img src="/assets/images/icons/redeem.svg" alt="point icon">Point</button>                
+              </div>
+
+              <!-- 10월 1주차 수정사항 - PC모드에서만 활성화되는 아이콘 + 텍스트 버튼 영역(마이페이지 / 출석체크 / 포인트 / 이벤트) -->
+              <div class="icon_btn_box">
+                <div class="icon_btn" onclick="location.href='/user/mypage.html'">
+                  <img src="/assets/images/icons/account.svg" alt="Biểu tượng My page">
+                  <span>My page</span><!-- 마이페이지 -->
+                </div>
+                <div class="icon_btn" onclick="location.href='/user/attendance.html'">
+                  <img src="/assets/images/icons/calendar_primary.svg" alt="Biểu tượng Điểm danh">
+                  <span>Điểm danh</span><!-- 출석체크 -->
+                </div>
+                <div class="icon_btn" onclick="location.href='/user/point.html'">
+                  <img src="/assets/images/icons/redeem.svg" alt="Biểu tượng point">
+                  <span>Point</span><!-- 포인트 -->
+                </div>
+                <div class="icon_btn" onclick="location.href='/event/main.html'">
+                  <img src="/assets/images/icons/event_primary.svg" alt="Biểu tượng Sự kiện">
+                  <span>Sự kiện</span><!-- 이벤트 -->
+                </div>
+              </div>
+
+              <!-- 게시글 작성하기 버튼 -->
+              <!-- <button class="submit_btn" onclick="location.href='/board/create.html'">Bài đăng</button> -->
+              <nav>
+                <ul>
+                  <!-- 사이드 바 메뉴 활성화된 상태로 표시 -->
+                  <li class="gnb"><div class="gnb_btn active">Yêu thích<span><img src="/assets/images/icons/arrowDown.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 즐겨찾기 -->
+                    <div class="lnb active">
+                      <div><a href="/board/main.html">Thông báo</a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Xem thêm"></span></div><!-- 공지사항 -->
+                      <div><a href="/event/main.html">Sự kiệ</a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 이벤트 -->
+                    </div>
+                  </li>
+                  <li class="gnb"><div class="gnb_btn active">Truy cập gần đây<span><img src="/assets/images/icons/arrowDown.svg" alt="Biểu tượng Xem thêm"></span></div><!-- 최근방문 -->
+                    <div class="lnb active">
+                      <div class="sub_category">Chính thức</div><!-- 공식게시판(클릭x) -->
+                      <div><a href="/board/main.html">Thông báo</a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 공지사항 -->
+                      <div><a href="/event/main.html">Sự kiệ</a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 이벤트 -->
+                      <div class="sub_category">Bảng tin fan</div><!-- 팬게시판(클릭x) -(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Bảng tin tự do<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 자유게시판 -->
+                      <div><a href="/board/main.html">Đánh giá<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 후기게시판 -->
+                      <div><a href="/board/main.html">Hỏi đáp<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 질문게시판(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Chia sẻ thông tin<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 소식공유 -->
+                      <div><a href="/user/attendance.html">Điểm danh<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 출석체크 -->
+                    </div>
+                  </li>
+                  <!-- 전체 -->
+                  <li class="gnb"><div class="gnb_btn active">Gần đây Lượt truy cập<span><img src="/assets/images/icons/arrowDown.svg" alt="Biểu tượng Xem thêm"></span></div><!-- 전체게시판 -->
+                    <div class="lnb active">
+                      <div class="sub_category">Chính thức</div><!-- 공식게시판(클릭x) -->
+                      <div><a href="/board/main.html">Thông báo</a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 공지사항 -->
+                      <div><a href="/event/main.html">Sự kiệ</a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 이벤트 -->
+                      <div class="sub_category">Bảng tin fan</div><!-- 팬게시판(클릭x) -(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Bảng tin tự do<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/star.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 자유게시판 -->
+                      <div><a href="/board/main.html">Đánh giá<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 후기게시판 -->
+                      <div><a href="/board/main.html">Hỏi đáp<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 질문게시판(베트남어번역 필요 - 추후 변경) -->
+                      <div><a href="/board/main.html">Chia sẻ thông tin<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 소식공유 -->
+                      <div><a href="/user/attendance.html">Điểm danh<img src="/assets/images/icons/new.svg" alt="Biểu tượng thông báo bài viết mới"></a><span><img src="/assets/images/icons/starFill20.svg" alt="Biểu tượng Yêu thích"></span></div><!-- 출석체크 -->
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="sidebar_bottom">
+                <button class="logout_btn">Logout</button>
+              </div>
+            </div>
+          </div>
+          <!-- // 사이드 바 메뉴 (햄버거 버튼 메뉴) -->
+        </div>        
+      </div>
+    </header>
+
+    <!-- 10월 1주차 수정사항 - 아래 main태그에 event_main 클래스 추가 -->    
+    <main class="event_main">
+      <!-- main contents tab -->
+      <div class="main_tab_cont">
+        <ul class="main_tab_list scroll">
+          <li class="main_tab"><a href="/index.html" class="subtitle2">Home</a></li>
+          <li class="main_tab"><a href="/board/latest.html" class="subtitle2">Mới</a></li> <!-- 최신순 -->
+          <li class="main_tab"><a href="/board/latest.html" class="subtitle2">Nổi bật</a></li><!-- 추천순 -->
+          <li class="main_tab"><a href="/board/official.html" class="subtitle2">Chính thức</a></li><!-- 공식게시판 -->
+          <li class="main_tab"><a href="/board/latest.html" class="subtitle2">Bảng tin fan</a></li><!-- 팬게시판 -->
+          <li class="main_tab active"><a href="/event/main.html" class="subtitle2">Sự kiện</a></li><!-- 이벤트 -->          
+        </ul>
+      </div>
+      <!-- // main tab -->
+      
+      <!-- order post 정렬기준 -->
+      <div class="order_box event">
+        <ul class="order_list post">
+          <li class="active">Mới nhất</li>
+          <li>|</li>
+          <li>Đề xuất</li>
+          <li>|</li>
+          <li>Lịch sử đăng ký</li> <!-- 신청 내역 -->
+        </ul>
+      </div>
+      <!-- //order post -->
+      
+      <div class="main_inner_box">
+        <!-- post list -->
+        <section class="post">
+          <h2 class="visually_hidden">Sự kiện</h2>
+          <!-- 9월 4주차 수정사항 - PC모드 > 게시판 페이지 타이틀 및 카테고리 영역 추가  -->
+          <div class="board_header">
+            <h3>Sự kiện</h3>
+            <div class="board_filter">
+              <span class="active">Mới nhất</span>
+              <span>Đề xuất</span>
+              <span>Lịch sử đăng ký</span>
+            </div>
+          </div>
+  
+          <div class="event_list_box">
+            <ul class="post_list event">
+              <!-- 모바일 모드 : 한 페이지 당 목록 15개 표시 -->
+              <!-- PC 모드 : 한 페이지 당 목록 20개 표시 -->
+              <!-- post unit - PREMIUM 등급 -->
+              <li class="post_item">
+                <article>
+                  <a href="/event/register.html">
+                    <!-- 아래 ul > li 구조 => div > span 구조로 변경 -->
+                    <div class="status_list">
+                      <span class="for_sale">Đang bán</span><!-- 판매중 -->
+                      <span class="premium">premium</span><!-- 등급 표시 (premium / standard) -->
+                      <span>Package</span> <!--구매방식-->
+                    </div>
+                    <!-- event title -->
+                    <h3 class="post_title">Đăng ký mua Merchandise Sự kiện Viewing Party Hà Nội tháng 08.2025</h3>
+                    <!-- 아래 ul > li 구조 => div > span 구조로 변경 -->
+                    <div class="post_item_info">
+                      <!-- event date -->
+                      <span class="post_user">19.08.2025 ~ 22.08.2025</span>
+                      <!-- event place -->
+                      <span class="post_date">Vikings Esports Stadium</span>
+                    </div>
+                  </a>
+                </article>
+              </li>
+              <!-- //post unit - PREMIUM 등급 -->
+    
+              <li class="post_item">
+                <article>
+                  <a href="/event/register_by_point.html">
+                    <!-- 09/12 - 이벤트 상태 추가 (패키지/포인트) 및 순서 변경(판매상태 / 등급 표시 / 구매방식)-->
+                    <!-- 아래 ul > li 구조 => div > span 구조로 변경 -->
+                    <div class="status_list">
+                      <span class="for_sale">Đang bán</span><!-- 판매중 -->
+                      <span class="premium">premium</span><!-- 등급 표시 (premium / standard) -->
+                      <span>Point</span> <!--구매방식-->
+                    </div>
+                    <!-- event title -->
+                    <h3 class="post_title">Đăng ký mua Merchandise Sự kiện Viewing Party Hà Nội tháng 08.2025</h3>
+                    <!-- 아래 ul > li 구조 => div > span 구조로 변경 -->
+                    <div class="post_item_info">
+                      <!-- event date -->
+                      <span class="post_user">19.08.2025 ~ 22.08.2025</span>
+                      <!-- event place -->
+                      <span class="post_date">Vikings Esports Stadium</span>
+                    </div>
+                  </a>
+                </article>
+              </li>
+              <!-- //post unit - PREMIUM 등급 -->
+    
+              <!-- post unit - STANDARD 등급 -->
+              <li class="post_item">
+                <article>
+                  <a href="/event/register_by_point.html">
+                    <div class="status_list">
+                      <span class="for_sale">Đang bán</span><!-- 판매중 -->
+                      <span class="standard">standard</span>
+                      <span>Point</span><!-- 구매방식 -->
+                    </div>
+                    <!-- event title -->
+                    <h3 class="post_title">Đăng ký mua Merchandise Sự kiện Viewing Party Hà Nội tháng 08.2025</h3>
+                    <div class="post_item_info">
+                      <!-- event date -->
+                      <span class="post_user">19.08.2025 ~ 22.08.2025</span>
+                      <!-- event place -->
+                      <span class="post_date">Vikings Esports Stadium</span>
+                    </div>
+                  </a>
+                </article>
+              </li>
+              <!--//post unit - STANDARD 등급 -->
+              <li class="post_item">
+                <article>
+                  <a href="/event/event_end.html">
+                    <div class="status_list">
+                      <span class="sale_end">Đã hết bán</span> <!-- 판매종료 -->
+                      <span class="premium">premium</span>
+                      <span>Point</span><!-- 구매방식 -->
+                    </div>
+                    <h3 class="post_title">Đăng ký mua Merchandise Sự kiện Viewing Party Hà Nội tháng 08.2025</h3>
+                    <div class="post_item_info">
+                      <span class="post_user">19.08.2025 ~ 22.08.2025</span>
+                      <span class="post_date">Vikings Esports Stadium</span>
+                    </div>
+                  </a>
+                </article>
+              </li>
+              <li class="post_item">
+                <article>
+                  <a href="/event/register.html">
+                    <div class="status_list">
+                      <span class="sale_end">Đã hết bán</span> <!-- 판매종료 -->
+                      <span class="standard">standard</span>
+                      <span>Point</span><!-- 구매방식 -->
+                    </div>
+                    <h3 class="post_title">Đăng ký mua Merchandise Sự kiện Viewing Party Hà Nội tháng 08.2025</h3>
+                    <div class="post_item_info">
+                      <span class="post_user">19.08.2025 ~ 22.08.2025</span>
+                      <span class="post_date">Vikings Esports Stadium</span>
+                    </div>
+                  </a>
+                </article>
+              </li>
+              <li class="post_item">
+                <article>
+                  <a href="/event/register.html">
+                    <div class="status_list">
+                      <span class="sale_end">Đã hết bán</span> <!-- 판매종료 -->
+                      <span class="premium">premium</span>
+                      <span>Package</span><!-- 구매방식 -->
+                    </div>
+                    <h3 class="post_title">Đăng ký mua Merchandise Sự kiện Viewing Party Hà Nội tháng 08.2025</h3>
+                    <div class="post_item_info">
+                      <span class="post_user">19.08.2025 ~ 22.08.2025</span>
+                      <span class="post_date">Vikings Esports Stadium</span>
+                    </div>
+                  </a>
+                </article>
+              </li>
+    
+            </ul>          
+
+            <!-- 9월 4주차 수정사항 - 게시글 목록 페이지내이션 갯수 추가(6~아이콘 버튼까지는 PC모드에서만 활성화) -->
+            <!-- post list pagenation -->
+            <ul class="pagenation">
+              <li><button class="start_page_btn"><img src="/assets/images/icons/arrowLeftDouble.svg" alt="Trang đầu tiên"></button></li>
+              <li><button class="prev_btn"><img src="/assets/images/icons/arrowLeft.svg" alt="Trang trước"></button></li>
+              <li><button class="page_num_btn active">1</button></li>
+              <li><button class="page_num_btn">2</button></li>
+              <li><button class="page_num_btn">3</button></li>
+              <li><button class="page_num_btn">4</button></li>
+              <li><button class="page_num_btn">5</button></li>
+              <li><button class="page_num_btn">6</button></li>
+              <li><button class="page_num_btn">7</button></li>
+              <li><button class="page_num_btn">8</button></li>
+              <li><button class="page_num_btn">9</button></li>
+              <li><button class="page_num_btn">10</button></li>
+              <li><button class="page_num_btn"><img src="/assets/images/icons/buttonTonal.svg" alt="more pagination icon"></button></li>          
+              <li><button class="next_btn"><img src="/assets/images/icons/arrowRight.svg" alt="Trang tiếp theo"></button></li>
+              <li><button class="end_page_btn"><img src="/assets/images/icons/arrowRightDouble.svg" alt="Trang cuối cùng"></button></li>
+            </ul>
+          </div>  
+        </section>
+        <!-- //post list --> 
+
+        <aside class="user_panel">
+          <div class="panel_top">
+            <div class="user_info">
+              <div class="profile">
+                <img src="/assets/images/main/banner01.png" alt="Ảnh đại diện của người dùng"> <!-- Profile image -->
+                
+                <ul>
+                  <li class="nickname">userNickname</li> 
+                  <li class="user_point">1,200P</li>
+                </ul>
+              </div>
+              <span class="logout_btn"><img src="/assets/images/icons/logout.svg" alt="Biểu tượng Đăng xuất"></span>
+            </div>
+            <div class="btn_box">
+              <!-- 아래 출석체크 페이지 이동경로는 임시경로로, 팬게시판 > 출석체크 페이지 경로로 변경해주세요. -->
+              <button class="attend_btn" onclick="location.href='/user/edit_mypage.html'"><img src="/assets/images/icons/account.svg" alt="My page">My page</button><!-- 출석체크 버튼 -->               
+              <button class="point_btn" onclick="location.href='/user/point.html'"><img src="/assets/images/icons/redeem.svg" alt="point icon">Point</button><!-- 포인트 버튼 -->  
+            </div>
+          </div>
+          <a href="/user/attendance.html" class="go_attendance_btn"><img src="/assets/images/icons/calendar.svg" alt="Biểu tượng Điểm danh">Điểm danh</a>
+          <div class="side_banner">
+            <img src="/assets/images/main/viewing.png" alt="banner image">
+          </div>
+  
+          <!-- 로그인한 사용자가 작성한 게시글 목록 요약 -->
+          <section class="main_section board">
+            <div class="board_top">
+              <div class="top_left">
+                <h2 class="body4">Đề xuất</h2>
+              </div>
+              <a class="top_right view_more_btn" href="/board/official.html">
+                <span class="body3">Xem thêm</span>
+                <img src="/assets/images/icons/arrowRight20_gray.svg" alt="Biểu tượng Xem thêm">
+              </a>
+            </div>
+            <ul>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="board_category">Chính thức</span>
+                    <h3 class="article_tit body4">Thông tin</h3>
+                    <p class="comment_count body4">[24]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="board_category">Bảng tin tự do</span>
+                    <h3 class="article_tit body4">Đội tuyển V1 chiến thắng áp đảo</h3>
+                    <p class="comment_count body4">[8]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Hướng dẫn</span>
+                    <h3 class="article_tit body4">Album mới phát hành!!</h3>
+                    <p class="comment_count body4">[13]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Đánh giá</span>
+                    <h3 class="article_tit body4">Những khoảnh khắc cảm động trong concert cuối cùng của ASTRO</h3>
+                    <p class="comment_count body4">[750]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Chính thức</span>
+                    <h3 class="article_tit body4">Lịch thi đấu vòng playoff VPC Mùa Hè 2025 được công bố chính thức</h3>
+                    <p class="comment_count body4">[7]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Bảng tin tự do</span>
+                    <h3 class="article_tit body4">Review tập 5 phim “Marry My Husband”</h3>
+                    <p class="comment_count body4">[56]</p>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="#">
+                    <span class="board_category">Đánh giá</span>
+                    <h3 class="article_tit body4">Sự kiện hot!</h3>
+                    <p class="comment_count body4">[34]</p>
+                  </a>
+                </article>
+              </li>
+            </ul>
+          </section>
+  
+          <!-- 공지사항 -->
+          <section class="main_section board">
+            <div class="board_top">
+              <div class="top_left">
+                <h2 class="body4">Thông báo</h2>
+              </div>
+              <div class="top_right">
+                <span class="body3"><span class="current_page">1</span>/<span class="total_page_count">4</span></span>
+                <div class="left_right_btns">
+                  <span><img src="/assets/images/icons/arrowLeft_gray.svg" alt="Biểu tượng trước đó"></span>
+                  <span><img src="/assets/images/icons/arrowRight20_gray.svg" alt="Biểu tượng tiếp theo"></span>
+                </div>
+              </div>
+            </div>
+            <ul class="official_post_list">
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="post_thumbnail"><img src="/assets/images/main/vip.png" alt="thumbnail image"></span><h3 class="article_tit body4">New VIP Package Open!</h3>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="post_thumbnail"><img src="/assets/images/main/viewing.png" alt="thumbnail image"></span>
+                    <h3 class="article_tit body4">🍀 DỰ ĐOÁN KẾT QUẢ TRẬN ĐẤU - V1 vs DK 🍀</h3>
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <a href="/board/detail.html">
+                    <span class="post_thumbnail"><img src="/assets/images/main/banner03.png" alt="thumbnail image"></span>
+                    <h3 class="article_tit body4">THÔNG BÁO CHÍNH THỨC VỀ ĐỊA ĐIỂM & THỜI GIAN NHẬN VÉ CỦA SỰ KIỆN VIEWING PARTY THÁNG 09</h3>
+                  </a>
+                </article>
+              </li>
+            </ul>
+          </section>
+  
+          <button class="submit_btn" onclick="location.href='/board/create.html'"><img src="/assets/images/icons/plus_white.svg" alt="Bài đăng">Bài đăng</button><!-- 글 작성하기 버튼 -->
+        </aside>        
+      </div>
+      <!-- // post_main_cont -->
+    </main>
+
+    <!-- 9월 4주차 수정사항 - footer 추가 -->
+    <footer class="main_footer">
+      <a href="#" class="footer_logo"><img src="/assets/images/main/logo_white.png" alt="JEJE logo"></a>
+      <div class="footer_cont">
+        <ul>
+          <li>
+            <a href="/user/terms_of_use.html">Điều khoản sử dụng</a><!--이용약관-->
+            <span>|</span>
+            <a href="/user/privacy.html">Chính sách bảo mật</a><!--개인정보처리방침-->
+            <span>|</span>
+            <a href="#">Trung tâm hỗ trợ</a><!--고객지원센터-->
+            <span>|</span>
+            <a href="#">Báo lỗi</a><!--오류 신고-->
+          </li>
+          <li>
+            <a href="#">Email liên hệ</a><!-- 문의메일 -->
+            <span>|</span>
+            <a href="#">jeje.email.com</a> <!-- 메일주소 -->
+          </li>
+        </ul>
+        <div class="copyright">
+          <p>Copyright ©  2025 JEJE All rights reserved.</p> <!-- 저작권 표시 -->
+          <p>Seoul, Korea</p><!-- 주소 -->
+        </div>
+      </div>
+    </footer>
+    
+    <!-- 9월 4주차 수정사항 - TOP 버튼 추가(PC모드에서만 활성화) -->
+    <span class="top_btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"><img src="/assets/images/icons/arrowTop_white.svg" alt="scroll to top button"></span>  
+    
+    <nav class="bottom_nav">
+      <ul>
+        <li><a href="/index.html"><img src="/assets/images/icons/home_white.svg" alt="Biểu tượng Trang chủ"><span>Home</span></a></li>
+        <li><a href="/board/main.html"><img src="/assets/images/icons/rising_white.svg" alt="Biểu tượng Tốt Nhất"><span>Best</span></a></li>
+        <li><a href="/board/create.html"><img src="/assets/images/icons/edit_white.svg" alt="Biểu tượng Tạo Bài"><span>Create</span></a></li>
+        <li><a href="/event/main.html"><img src="/assets/images/icons/event.svg" alt="Biểu tượng Sự kiện"><span>Event</span></a></li>
+        <li><a href="/user/mypage.html"><img src="/assets/images/icons/person_white.svg" alt="Biểu tượng Đội hình"><span>Mypage</span></a></li> 
+        <!-- <li><a href="#"><img src="/assets/images/icons/bookmark_white.svg" alt="Biểu tượng Quán Cà Phê của Mình"><span>Mycafe</span></a></li> -->
+      </ul>
+    </nav>   
+    <!-- //Bottom Navigation bar -->
+
+    <div class="modal_cont logout">
+      <!-- 사이드바>로그아웃 버튼 클릭시 활성화 모달 내용 -->
+      <div class="modal_leave">
+        <p>Bạn có muốn đăng xuất không?</p>
+        <div class="btn_box">
+          <button class="cancel_btn">Hủy</button><!-- 취소 -->
+          <!-- 로그아웃 버튼 클릭시, 홈 - index.html로 이동 -->
+          <button class="leave_btn">Đăng xuất</button><!-- 로그아웃 -->
+        </div>
+      </div>
+    </div>
+    <!-- // modal -->
+
+    <!-- 토스트/스낵바 - 게시글 수정 / 삭제 / 신고 접수 / 로그아웃 안내 -->
+    <div class="snack_bar hide"></div>      
+  </div>
+  <script>
+    // main tab - activate/inactivate a board category
+    const main_tab = document.querySelectorAll(".main_tab");
+    main_tab.forEach(tab => tab.addEventListener("click", (e) =>{
+      if(tab.classList.contains("active")){
+        return;
+      }
+
+      const currentActiveTab = document.querySelector(".main_tab.active");
+      if(currentActiveTab){
+        currentActiveTab.classList.remove("active");
+      }
+
+      tab.classList.add("active");
+    }))
+
+    // order post - Lastest(default) / Hot&Popular
+    const orderItems = document.querySelectorAll(".order_list li");
+    orderItems.forEach(item => item.addEventListener("click", (e) =>{
+      if(item.classList.contains("active")){
+        return;
+      }
+
+      const currentOrder = document.querySelector(".order_list li.active");
+      if(currentOrder){
+        currentOrder.classList.remove("active");
+      }
+
+      item.classList.add("active");        
+    }))
+
+    // pagination
+    const paginationItems = document.querySelectorAll(".page_num_btn");
+    paginationItems.forEach(item => item.addEventListener("click", (e) =>{
+      if(item.classList.contains("active")){
+        return;
+      }
+
+      const currentPage = document.querySelector(".page_num_btn.active");
+      if(currentPage){
+        currentPage.classList.remove("active");
+      }
+
+      item.classList.add("active");        
+    }))
+
+    const startBtn = document.querySelector(".start_page_btn");
+    const prevBtn = document.querySelector(".prev_btn");
+    const nextBtn = document.querySelector(".next_btn");
+    const endBtn = document.querySelector(".end_page_btn");
+
+    startBtn.addEventListener("click", () => {
+      updateActiveByIndex(0);
+    });
+
+    endBtn.addEventListener("click", () => {
+      updateActiveByIndex(paginationItems.length - 1);
+    });
+
+    prevBtn.addEventListener("click", () => {
+      const currentIndex = getCurrentActiveIndex();
+      if (currentIndex > 0) {
+        updateActiveByIndex(currentIndex - 1);
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const currentIndex = getCurrentActiveIndex();
+      if (currentIndex < paginationItems.length - 1) {
+        updateActiveByIndex(currentIndex + 1);
+      }
+    });
+
+    // 도우미 함수들
+    function getCurrentActiveIndex() {
+      return Array.from(paginationItems).findIndex(item =>
+        item.classList.contains("active")
+      );
+    }
+
+    function updateActiveByIndex(index) {
+      const currentPage = document.querySelector(".page_num_btn.active");
+      if (currentPage) currentPage.classList.remove("active");
+
+      paginationItems[index].classList.add("active");
+    }
+
+    // 9월 4주차 수정사항 - [PC모드] 게시판 필터링 버튼 활성화/비활성화
+    boardFilterBtns = document.querySelectorAll(".board_filter > span");
+    boardFilterBtns.forEach(filter => filter.addEventListener("click", ()=>{
+      boardFilterBtns.forEach(btn => btn.classList.remove("active")); //모든 필터링 버튼에서 active 클래스 제거
+
+      filter.classList.add("active"); //클릭한 필터링 버튼에만 active 클래스 추가
+    }))
+
+    // 9월 4주차 TOP버튼 활성/비활성화 및 클릭시 스크롤 동작
+    window.addEventListener('scroll', function () {
+      const topBtn = document.querySelector('.top_btn');
+      const scrollY = window.scrollY || window.pageYOffset;
+      const clientHeight = window.innerHeight / 3;
+
+      if (scrollY > clientHeight ) {
+        topBtn.classList.add("active");
+      } else {
+        topBtn.classList.remove("active");
+      }
+    });    
+  </script>
+</body>
+</html>
